@@ -14,12 +14,12 @@ export class ShowFamComponent implements OnInit {
   FamilyList:any=[];
 
   ngOnInit(): void {
-    this.refreshDepList();
+    this.refreshFamList();
   }
 
 
 
-  refreshDepList(){
+  refreshFamList(){
     this.service.getFamList().subscribe(data=>{
       this.FamilyList=data;
       

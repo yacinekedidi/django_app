@@ -42,7 +42,7 @@ def familyApi(request, id=0):
 @csrf_exempt
 def orphanApi(request, id=0):
     if request.method == 'GET':
-        orphans = Family.objects.all()
+        orphans = Orphan.objects.all()
         orphans_serializer = OrphanSerializer(orphans, many=True)
         return JsonResponse(orphans_serializer.data, safe=False)
 
@@ -52,7 +52,7 @@ def orphanApi(request, id=0):
         if orphan_serializer.is_valid():
             orphan_serializer.save()
             return JsonResponse("Added Successfully", safe=False)
-        # print(orphan_serializer.errors)
+        print(orphan_serializer.errors)
         return JsonResponse("Failed to add", safe=False)
     elif request.method == 'PUT':
         orphan_data = JSONParser().parse(request)
@@ -102,7 +102,7 @@ def subsidyApi(request, id=0):
 def orphaneducationApi(request, id=0):
     if request.method == 'GET':
         orphanseducation = OrphanEducation.objects.all()
-        orphanseducation_serializer = SubsidySerializer(
+        orphanseducation_serializer = OrphanEducationSerializer(
             orphanseducation, many=True)
         return JsonResponse(orphanseducation_serializer.data, safe=False)
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedService } from 'src/app/shared.service';
 
 @Component({
   selector: 'app-show-orph',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShowOrphComponent implements OnInit {
 
-  constructor() { }
+  OrphanList:any=[];
+
+  constructor(private service:SharedService) { }
 
   ngOnInit(): void {
+    this.refreshOrphList();
+  }
+
+
+
+  refreshOrphList(){
+    this.service.getOrphList().subscribe(data=>{
+      this.OrphanList=data;
+      
+    });
   }
 
 }
