@@ -45,6 +45,23 @@ readonly APIUrl = "http://127.0.0.1:8000";
   return this.http.delete(this.APIUrl + '/orphan/'+val);
   }
 
+  getSubList():Observable<any[]>{
+    return this.http.get<any[]>(this.APIUrl + '/subsidy/');
+    }
+  
+  addSubsidy(val:any){
+    return this.http.post(this.APIUrl + '/subsidy/',val);
+    }
+  
+  updateSubsidy(val:any){
+    return this.http.put(this.APIUrl + '/subsidy/',val);
+    }
+  
+  deleteSubsidy(val:any){
+    return this.http.delete(this.APIUrl + '/subsidy/'+val);
+    }
+  
+
  
   getAllFamilyNames():Observable<any[]>{
   return this.http.get<any[]>(this.APIUrl+'/family/');

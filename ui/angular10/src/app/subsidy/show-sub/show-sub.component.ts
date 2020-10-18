@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedService } from 'src/app/shared.service';
 
 @Component({
   selector: 'app-show-sub',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShowSubComponent implements OnInit {
 
-  constructor() { }
+  SubsidyList:any=[]
+
+  constructor(private service:SharedService) { }
 
   ngOnInit(): void {
+    this.refreshSubList();
+  }
+
+
+
+  refreshSubList(){
+    this.service.getSubList().subscribe(data=>{
+      this.SubsidyList=data;
+      
+    });
   }
 
 }

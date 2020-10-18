@@ -1,1 +1,43 @@
-<p>show-sub works!</p>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>sub_type</th>
+            <th>title</th>
+            <th>description</th>
+            <th>price_unit</th>
+            <th>gender</th>
+            <th>age_min</th>
+            <th>age_max</th>
+            <th>status</th>
+            <th>amount</th>
+            <th>unit</th>
+            <th>Options</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of SubsidyList">
+            <td>{{ item.id }}</td>
+            <td>{{ item.sub_type }}</td>
+            <td>{{ item.title }}</td>
+            <td>{{ item.description }}</td>
+            <td>{{ item.price_unit }}</td>
+            <td>{{ item.gender }}</td>
+            <td>{{ item.age_min }}</td>
+            <td>{{ item.age_max }}</td>
+            <td>{{ item.status }}</td>
+            <td>{{ item.amount }}</td>
+            <td>{{ item.unit }}</td> 
+            <td>
+                <button type="button" class="btn btn-light mr-1">
+                    Edit
+                </button>
+                <button type="button" class="btn btn-light mr-1">
+                    Delete
+                </button>
+            </td>
+        </tr>
+    </tbody>
+
+</table>
+
