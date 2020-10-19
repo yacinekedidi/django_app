@@ -83,7 +83,7 @@ def subsidyApi(request, id=0):
         if subsidy_serializer.is_valid():
             subsidy_serializer.save()
             return JsonResponse("Added Successfully", safe=False)
-        # print(subsidy_serializer.errors)
+        print(subsidy_serializer.errors)
         return JsonResponse("Failed to add", safe=False)
     elif request.method == 'PUT':
         subsidy_data = JSONParser().parse(request)
@@ -147,7 +147,7 @@ def familysubsidyApi(request, id=0):
         if familysubsidy_serializer.is_valid():
             familysubsidy_serializer.save()
             return JsonResponse("Added Successfully", safe=False)
-        print(familysubsidy.errors)
+        # print(familysubsidy_serializer.errors)
         return JsonResponse("Failed to add", safe=False)
     elif request.method == 'PUT':
         familysubsidy_data = JSONParser().parse(request)
