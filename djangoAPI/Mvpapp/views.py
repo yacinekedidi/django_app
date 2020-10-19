@@ -23,10 +23,11 @@ def familyApi(request, id=0):
         if family_serializer.is_valid():
             family_serializer.save()
             return JsonResponse("Added Successfully", safe=False)
+        print(family_serializer.errors)
         return JsonResponse("Failed to add", safe=False)
     elif request.method == 'PUT':
         family_data = JSONParser().parse(request)
-        print(family_data['id'])
+        # print(family_data['id'])
         family = Family.objects.get(id=family_data['id'])
         family_serializer = FamilySerializer(family, data=family_data)
         if family_serializer.is_valid():

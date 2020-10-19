@@ -1,1 +1,35 @@
-<p>add-edit-sub works!</p>
+<div class="form-froup row">
+
+    <label class="col-sm-2 col-form-label">Subsidy</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="sub_type"
+        placeholder="subsidy type">
+        <input type="text" class="form-control" [(ngModel)]="title"
+        placeholder="title">
+        <input type="text" class="form-control" [(ngModel)]="description"
+        placeholder="description">
+        <input type="text" class="form-control" [(ngModel)]="price_unit"
+        placeholder="price_unit">
+        <input type="text" class="form-control" [(ngModel)]="gender"
+        placeholder="gender">
+        <input type="text" class="form-control" [(ngModel)]="age_min"
+        placeholder="age_min">
+        <input type="text" class="form-control" [(ngModel)]="age_max"
+        placeholder="age_max">
+        <input type="text" class="form-control" [(ngModel)]="status"
+        placeholder="status">
+        <input type="text" class="form-control" [(ngModel)]="amount"
+        placeholder="amount">
+        <input type="text" class="form-control" [(ngModel)]="unit"
+        placeholder="unit">
+        
+    </div>
+</div>
+
+<button (click)="addSubsidy()" *ngIf="sub.id==0" class="btn btn-primary">
+    Add
+</button>
+
+<button (click)="updateSubsidy()" *ngIf="sub.id!=0" class="btn btn-primary">
+    Update
+</button>
