@@ -1,16 +1,23 @@
 <div class="form-froup row">
 
-    <label class="col-sm-2 col-form-label">Orphan</label>
+    <label class="col-sm-2 col-form-label">family member name:</label>
     <div class="col-sm-10">
-        <input type="text" class="form-control" [(ngModel)]="family_id"
-        placeholder="family_id">
+        <select class="form-control" [(ngModel)]="family_id">
+            <option>--select a family member full name--</option>
+            <option *ngFor="let item of FamiliesList" value="{{ item.id }}">
+                {{ item.first_name }} {{ item.last_name }}
+            </option>
+        </select>
         <input type="text" class="form-control" [(ngModel)]="first_name"
         placeholder="firstname">
         <input type="text" class="form-control" [(ngModel)]="last_name"
         placeholder="lastname">
-        <input type="text" class="form-control" [(ngModel)]="sex"
-        placeholder="sex">
-        <input type="text" class="form-control" [(ngModel)]="birthdate"
+        <select class="form-control" [(ngModel)]="sex">
+            <option>--select a gender--</option>
+            <option>male</option>
+            <option>female</option>
+        </select>
+        <input type="date" class="form-control" [(ngModel)]="birthdate"
         placeholder="birthdate">
         <input type="text" class="form-control" [(ngModel)]="hobbies"
         placeholder="hobbies">
@@ -21,6 +28,8 @@
         
     </div>
 </div>
+
+
 
 <button (click)="addOrphan()" *ngIf="orph.id==0" class="btn btn-primary">
     Add

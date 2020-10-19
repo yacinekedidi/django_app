@@ -20,19 +20,33 @@ export class AddEditOrphComponent implements OnInit {
   hobbies:string;
   education_status:string;
   health_status:string;
+  Family:string;
+
+  FamiliesList:any=[];
   
 
   ngOnInit(): void {
-    this.id = this.orph.id;
-    this.family_id = this.orph.family_id;
-    this.first_name = this.orph.first_name;
-    this.last_name = this.orph.last_name;
-    this.sex = this.orph.sex;
-    this.birthdate = this.orph.birthdate;
-    this.hobbies = this.orph.hobbies;
-    this.education_status = this.orph.education_status;
-    this.health_status = this.orph.health_status;
+   this.loadFamiliesList();
   }
+
+
+  loadFamiliesList(){
+
+    this.service.getAllFamilyNames().subscribe((data:any)=>{
+      this.FamiliesList=data;
+      this.id = this.orph.id;
+      this.family_id = this.orph.family_id;
+      this.first_name = this.orph.first_name;
+      this.last_name = this.orph.last_name;
+      this.sex = this.orph.sex;
+      this.birthdate = this.orph.birthdate;
+      this.hobbies = this.orph.hobbies;
+      this.education_status = this.orph.education_status;
+      this.health_status = this.orph.health_status;
+    })
+  }
+
+
 
 
   addOrphan(){

@@ -8,9 +8,12 @@
         placeholder="firstname">
         <input type="text" class="form-control" [(ngModel)]="last_name"
         placeholder="lastname">
-        <input type="text" class="form-control" [(ngModel)]="sex"
-        placeholder="sex">
-        <input type="text" class="form-control" [(ngModel)]="birthdate"
+        <select class="form-control" [(ngModel)]="sex">
+            <option>--select a gender--</option>
+            <option>male</option>
+            <option>female</option>
+        </select>
+        <input type="date" class="form-control" [(ngModel)]="birthdate"
         placeholder="birthdate">
         <input type="text" class="form-control" [(ngModel)]="address"
         placeholder="address">
