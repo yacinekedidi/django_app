@@ -31,24 +31,132 @@ data-backdrop="static" data-keyboard="false"
 <table class="table table-striped">
     <thead>
         <tr>
-            <th>id</th>
-            <th>cin</th>
-            <th>firstname</th>
-            <th>lastname</th>
-            <th>sex</th>
-            <th>birth</th>
-            <th>address</th>
-            <th>phone</th>
-            <th>insurance</th>
-            <th>job</th>
-            <th>income</th>
-            <th>homestatus</th>
-            <th>owner</th>
-            <th>health_status</th>
-            <th>parent_name</th>
-            <th>causeofdeath</th>
-            <th>sponsorname</th>
-            <th>familystatus</th>
+            <th>
+              <div class="d-flex flex-row">
+                <input [(ngModel)]="IdFilter" class="form-control"
+                (keyup)="FilterFunction()" placeholder="Filter">
+              </div>
+              id
+            </th>
+            <th>
+              <div class="d-flex flex-row">
+                <input [(ngModel)]="CinFilter" class="form-control"
+                (keyup)="FilterFunction()" placeholder="Filter">
+              </div>
+              cin
+            </th>
+            <th>
+              <div class="d-flex flex-row">
+                <input [(ngModel)]="FirstNameFilter" class="form-control"
+                (keyup)="FilterFunction()" placeholder="Filter">
+              </div>
+              firstname
+            </th>
+            <th>
+              <div class="d-flex flex-row">
+                <input [(ngModel)]="LastNameFilter" class="form-control"
+                (keyup)="FilterFunction()" placeholder="Filter">
+              </div>
+              lastname
+            </th>
+            <th>
+              <div class="d-flex flex-row">
+                <input [(ngModel)]="SexFilter" class="form-control"
+                (keyup)="FilterFunction()" placeholder="Filter">
+              </div>
+              sex
+            </th>
+            <th>
+              <div class="d-flex flex-row">
+                <input [(ngModel)]="BirthdateFilter" class="form-control"
+                (keyup)="FilterFunction()" placeholder="Filter">
+              </div>
+              birthdate
+            </th>
+            <th>
+              <div class="d-flex flex-row">
+                <input [(ngModel)]="AddressFilter" class="form-control"
+                (keyup)="FilterFunction()" placeholder="Filter">
+              </div>
+              address
+            </th>
+            <th>
+              <div class="d-flex flex-row">
+                <input [(ngModel)]="PhoneFilter" class="form-control"
+                (keyup)="FilterFunction()" placeholder="Filter">
+              </div>
+              phone
+            </th>
+            <th>
+              <div class="d-flex flex-row">
+                <input [(ngModel)]="HealthInsuranceFilter" class="form-control"
+                (keyup)="FilterFunction()" placeholder="Filter">
+              </div>
+              insurance
+            </th>
+            <th>
+              <div class="d-flex flex-row">
+                <input [(ngModel)]="JobFilter" class="form-control"
+                (keyup)="FilterFunction()" placeholder="Filter">
+              </div>
+              job
+            </th>
+            <th>
+              <div class="d-flex flex-row">
+                <input [(ngModel)]="IncomeFilter" class="form-control"
+                (keyup)="FilterFunction()" placeholder="Filter">
+              </div>
+              income
+            </th>
+            <th>
+              <div class="d-flex flex-row">
+                <input [(ngModel)]="HomeStatusFilter" class="form-control"
+                (keyup)="FilterFunction()" placeholder="Filter">
+              </div>
+              homestatus
+            </th>
+            <th>
+              <div class="d-flex flex-row">
+                <input [(ngModel)]="HomeOwnerFilter" class="form-control"
+                (keyup)="FilterFunction()" placeholder="Filter">
+              </div>
+              owner
+            </th>
+            <th>
+              <div class="d-flex flex-row">
+                <input [(ngModel)]="HealthStatusFilter" class="form-control"
+                (keyup)="FilterFunction()" placeholder="Filter">
+              </div>
+              health_status
+            </th>
+            <th>
+              <div class="d-flex flex-row">
+                <input [(ngModel)]="DeceasedParentNameFilter" class="form-control"
+                (keyup)="FilterFunction()" placeholder="Filter">
+              </div>
+              parent_name
+            </th>
+            <th>
+              <div class="d-flex flex-row">
+                <input [(ngModel)]="CauseOfDeathFilter" class="form-control"
+                (keyup)="FilterFunction()" placeholder="Filter">
+              </div>
+              causeofdeath
+            </th>
+            <th>
+              <div class="d-flex flex-row">
+                <input [(ngModel)]="SponsorNameFilter" class="form-control"
+                (keyup)="FilterFunction()" placeholder="Filter">
+              </div>
+              sponsorname
+            </th>
+            <th>
+              <div class="d-flex flex-row">
+                <input [(ngModel)]="FamilyStatusFilter" class="form-control"
+                (keyup)="FilterFunction()" placeholder="Filter">
+              </div>
+              familystatus
+            </th>
             <th>Options</th>
         </tr>
     </thead>

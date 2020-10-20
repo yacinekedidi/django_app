@@ -2,12 +2,13 @@
 
     <label class="col-sm-2 col-form-label">family member name:</label>
     <div class="col-sm-10">
-        <select class="form-control" [(ngModel)]="family_id">
-            <option>--select a family member full name--</option>
-            <option *ngFor="let item of FamiliesList" value="{{ item.id }}">
-                {{ item.first_name }} {{ item.last_name }}
+        <select class="form-control" [(ngModel)]="family_id" data-live-search="true">
+            <option>--select a family member national identification card--</option>
+            <option *ngFor="let item of FamiliesList" value="{{ item.id }}" data-tokens="{{item.cin}}">
+                {{ item.cin }}
             </option>
         </select>
+        
         <input type="text" class="form-control" [(ngModel)]="first_name"
         placeholder="firstname">
         <input type="text" class="form-control" [(ngModel)]="last_name"

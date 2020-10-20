@@ -29,17 +29,83 @@ data-backdrop="static" data-keyboard="false">
 <table class="table table-striped">
     <thead>
         <tr>
-            <th>id</th>
-            <th>sub_type</th>
-            <th>title</th>
-            <th>description</th>
-            <th>price_unit</th>
-            <th>gender</th>
-            <th>age_min</th>
-            <th>age_max</th>
-            <th>status</th>
-            <th>amount</th>
-            <th>unit</th>
+            <th>
+              <div class="d-flex flex-row">
+              <input [(ngModel)]="IdFilter" class="form-control"
+              (keyup)="FilterFunction()" placeholder="Filter">
+              </div>
+              id
+            </th>
+            <th>
+              <div class="d-flex flex-row">
+              <input [(ngModel)]="SubTypeFilter" class="form-control"
+              (keyup)="FilterFunction()" placeholder="Filter">
+              </div>
+              sub_type
+            </th>
+            <th>
+              <div class="d-flex flex-row">
+              <input [(ngModel)]="TitleFilter" class="form-control"
+              (keyup)="FilterFunction()" placeholder="Filter">
+              </div>
+              title
+            </th>
+            <th>
+              <div class="d-flex flex-row">
+              <input [(ngModel)]="DescriptionFilter" class="form-control"
+              (keyup)="FilterFunction()" placeholder="Filter">
+              </div>
+              description
+            </th>
+            <th>
+              <div class="d-flex flex-row">
+              <input [(ngModel)]="PriceUnitFilter" class="form-control"
+              (keyup)="FilterFunction()" placeholder="Filter">
+              </div>
+              price_unit
+            </th>
+            <th>
+              <div class="d-flex flex-row">
+              <input [(ngModel)]="GenderFilter" class="form-control"
+              (keyup)="FilterFunction()" placeholder="Filter">
+              </div>
+              gender
+            </th>
+            <th>
+              <div class="d-flex flex-row">
+              <input [(ngModel)]="AgeMinFilter" class="form-control"
+              (keyup)="FilterFunction()" placeholder="Filter">
+              </div>
+              age_min
+            </th>
+            <th>
+              <div class="d-flex flex-row">
+              <input [(ngModel)]="AgeMaxFilter" class="form-control"
+              (keyup)="FilterFunction()" placeholder="Filter">
+              </div>
+              age_max
+            </th>
+            <th>
+              <div class="d-flex flex-row">
+              <input [(ngModel)]="StatusFilter" class="form-control"
+              (keyup)="FilterFunction()" placeholder="Filter">
+              </div>
+              status
+            </th>
+            <th>
+              <div class="d-flex flex-row">
+              <input [(ngModel)]="AmountFilter" class="form-control"
+              (keyup)="FilterFunction()" placeholder="Filter">
+              </div>
+              amount
+            </th>
+            <th>
+              <div class="d-flex flex-row">
+              <input [(ngModel)]="UnitFilter" class="form-control"
+              (keyup)="FilterFunction()" placeholder="Filter">
+              </div>
+              unit
+            </th>
             <th>Options</th>
         </tr>
     </thead>
