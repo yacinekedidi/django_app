@@ -16,6 +16,9 @@ import { AddEditSubComponent } from './subsidy/add-edit-sub/add-edit-sub.compone
 
 import { HttpClientModule } from '@angular/common/http';
 import {FormsModule,ReactiveFormsModule} from '@angular/forms';
+import { MoreInfoComponent } from './family/more-info/more-info.component';
+import { MoreInfoOrphanComponent } from './orphan/more-info-orphan/more-info-orphan.component';
+import { InfoSubComponent } from './subsidy/info-sub/info-sub.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import {FormsModule,ReactiveFormsModule} from '@angular/forms';
     AddEditOrphComponent,
     SubsidyComponent,
     ShowSubComponent,
-    AddEditSubComponent
+    AddEditSubComponent,
+    MoreInfoComponent,
+    MoreInfoOrphanComponent,
+    InfoSubComponent
   ],
   imports: [
     BrowserModule,

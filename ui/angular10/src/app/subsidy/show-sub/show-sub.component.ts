@@ -12,6 +12,7 @@ export class ShowSubComponent implements OnInit {
   SubsidyList:any=[]
   ModalTitle:string;
   ActivateAddEditSubComp:boolean=false;
+  ActivateInfoSubComp:boolean=false;
   sub:any;
 
   IdFilter:string="";
@@ -52,13 +53,20 @@ export class ShowSubComponent implements OnInit {
 
     this.ModalTitle="Add Subsidy";
     this.ActivateAddEditSubComp=true;
+    this.ActivateInfoSubComp=false;
   }
 
   editClick(item){
     this.sub=item;
     this.ModalTitle="Edit Subsidy";
     this.ActivateAddEditSubComp=true;
+    this.ActivateInfoSubComp=false;
+  }
 
+  infoClick(item){
+    this.sub=item;
+    this.ModalTitle="Subsidy Information";
+    this.ActivateInfoSubComp=true;
   }
 
   deleteClick(item){

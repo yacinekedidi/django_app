@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { $ } from 'protractor';
 import { SharedService } from 'src/app/shared.service';
 
 @Component({
@@ -11,6 +12,7 @@ export class ShowOrphComponent implements OnInit {
   OrphanList:any=[];
   ModalTitle:string;
   ActivateAddEditOrphComp:boolean=false;
+  ActivateInfoOrphComp:boolean=false;
   orph:any;
 
   IdFilter:string="";
@@ -47,13 +49,20 @@ export class ShowOrphComponent implements OnInit {
 
     this.ModalTitle="Add Orphan";
     this.ActivateAddEditOrphComp=true;
+    this.ActivateInfoOrphComp=false;
   }
 
   editClick(item){
     this.orph=item;
     this.ModalTitle="Edit Orphan";
     this.ActivateAddEditOrphComp=true;
+    this.ActivateInfoOrphComp=false;
+  }
 
+  infoClick(item){
+    this.orph=item;
+    this.ModalTitle="Orphan Information";
+    this.ActivateInfoOrphComp=true;
   }
 
   deleteClick(item){

@@ -14,13 +14,13 @@ export class ShowFamComponent implements OnInit {
   FamilyList:any=[];
   ModalTitle:string;
   ActivateAddEditFamComp:boolean=false;
+  ActivateInfoFamComp:boolean=false;
   fam:any;
 
 
   IdFilter:string="";
   CinFilter:string="";
-  FirstNameFilter:string="";
-  LastNameFilter:string="";
+  NameFilter:string="";
   SexFilter:string="";
   BirthdateFilter:string="";
   AddressFilter:string="";
@@ -70,15 +70,20 @@ export class ShowFamComponent implements OnInit {
 
     this.ModalTitle="Add Family";
     this.ActivateAddEditFamComp=true;
+    this.ActivateInfoFamComp=false;
   }
 
   editClick(item){
     this.fam=item;
     this.ModalTitle="Edit Family";
     this.ActivateAddEditFamComp=true;
-
+    this.ActivateInfoFamComp=false;
   }
-
+  infoClick(item){
+    this.fam=item;
+    this.ModalTitle="Family Information";
+    this.ActivateInfoFamComp=true;
+  }
 
 
   deleteClick(item){
@@ -113,8 +118,7 @@ export class ShowFamComponent implements OnInit {
   FilterFunction(){
     var IdFilter = this.IdFilter;
     var CinFilter = this.CinFilter;
-    var FirstNameFilter= this.FirstNameFilter;
-    var LastNameFilter= this.LastNameFilter;
+    var NameFilter= this.NameFilter;
     var SexFilter= this.SexFilter.toString();
     var BirthdateFilter= this.BirthdateFilter.toString();
     var AddressFilter= this.AddressFilter;
@@ -131,17 +135,15 @@ export class ShowFamComponent implements OnInit {
     var FamilyStatusFilter= this.FamilyStatusFilter;
   
     this.FamilyList = this.FamilyListWithoutFilter.filter(function(el){
+      var Name = el.first_name.concat(el.last_name)
       return el.id.toString().toLowerCase().startsWith(
         IdFilter.toString().trim().toLowerCase()
       ) &&
       el.cin.toString().toLowerCase().startsWith(
         CinFilter.toString().trim().toLowerCase()
       ) &&
-      el.first_name.toString().toLowerCase().startsWith(
-        FirstNameFilter.toString().trim().toLowerCase()
-      ) &&
-      el.last_name.toString().toLowerCase().startsWith(
-        LastNameFilter.toString().trim().toLowerCase()
+      Name.toLowerCase().includes(
+        NameFilter.toString().trim().toLowerCase()
       ) &&
       el.sex.toString().toLowerCase().startsWith(
         SexFilter.toString().trim().toLowerCase()

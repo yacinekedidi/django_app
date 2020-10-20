@@ -22,6 +22,9 @@ data-backdrop="static" data-keyboard="false"
         <div class="modal-body">
          <app-add-edit [fam]="fam" *ngIf="ActivateAddEditFamComp"></app-add-edit>
         </div>
+        <div class="modal-body">
+          <app-more-info [fam]="fam" *ngIf="ActivateInfoFamComp"></app-more-info>
+         </div>
       </div>
     </div>
   </div>
@@ -31,157 +34,60 @@ data-backdrop="static" data-keyboard="false"
 <table class="table table-striped">
     <thead>
         <tr>
-            <th>
-              <div class="d-flex flex-row">
-                <input [(ngModel)]="IdFilter" class="form-control"
-                (keyup)="FilterFunction()" placeholder="Filter">
-              </div>
-              id
-            </th>
-            <th>
+             <th>
               <div class="d-flex flex-row">
                 <input [(ngModel)]="CinFilter" class="form-control"
                 (keyup)="FilterFunction()" placeholder="Filter">
               </div>
-              cin
+              CIN
             </th>
             <th>
               <div class="d-flex flex-row">
-                <input [(ngModel)]="FirstNameFilter" class="form-control"
+                <input [(ngModel)]="NameFilter" class="form-control"
                 (keyup)="FilterFunction()" placeholder="Filter">
               </div>
-              firstname
-            </th>
-            <th>
-              <div class="d-flex flex-row">
-                <input [(ngModel)]="LastNameFilter" class="form-control"
-                (keyup)="FilterFunction()" placeholder="Filter">
-              </div>
-              lastname
-            </th>
-            <th>
-              <div class="d-flex flex-row">
-                <input [(ngModel)]="SexFilter" class="form-control"
-                (keyup)="FilterFunction()" placeholder="Filter">
-              </div>
-              sex
+              Full Name
             </th>
             <th>
               <div class="d-flex flex-row">
                 <input [(ngModel)]="BirthdateFilter" class="form-control"
                 (keyup)="FilterFunction()" placeholder="Filter">
               </div>
-              birthdate
-            </th>
-            <th>
-              <div class="d-flex flex-row">
-                <input [(ngModel)]="AddressFilter" class="form-control"
-                (keyup)="FilterFunction()" placeholder="Filter">
-              </div>
-              address
+              Birthdate
             </th>
             <th>
               <div class="d-flex flex-row">
                 <input [(ngModel)]="PhoneFilter" class="form-control"
                 (keyup)="FilterFunction()" placeholder="Filter">
               </div>
-              phone
-            </th>
-            <th>
-              <div class="d-flex flex-row">
-                <input [(ngModel)]="HealthInsuranceFilter" class="form-control"
-                (keyup)="FilterFunction()" placeholder="Filter">
-              </div>
-              insurance
-            </th>
-            <th>
-              <div class="d-flex flex-row">
-                <input [(ngModel)]="JobFilter" class="form-control"
-                (keyup)="FilterFunction()" placeholder="Filter">
-              </div>
-              job
-            </th>
-            <th>
-              <div class="d-flex flex-row">
-                <input [(ngModel)]="IncomeFilter" class="form-control"
-                (keyup)="FilterFunction()" placeholder="Filter">
-              </div>
-              income
-            </th>
-            <th>
-              <div class="d-flex flex-row">
-                <input [(ngModel)]="HomeStatusFilter" class="form-control"
-                (keyup)="FilterFunction()" placeholder="Filter">
-              </div>
-              homestatus
-            </th>
-            <th>
-              <div class="d-flex flex-row">
-                <input [(ngModel)]="HomeOwnerFilter" class="form-control"
-                (keyup)="FilterFunction()" placeholder="Filter">
-              </div>
-              owner
-            </th>
-            <th>
-              <div class="d-flex flex-row">
-                <input [(ngModel)]="HealthStatusFilter" class="form-control"
-                (keyup)="FilterFunction()" placeholder="Filter">
-              </div>
-              health_status
-            </th>
-            <th>
-              <div class="d-flex flex-row">
-                <input [(ngModel)]="DeceasedParentNameFilter" class="form-control"
-                (keyup)="FilterFunction()" placeholder="Filter">
-              </div>
-              parent_name
-            </th>
-            <th>
-              <div class="d-flex flex-row">
-                <input [(ngModel)]="CauseOfDeathFilter" class="form-control"
-                (keyup)="FilterFunction()" placeholder="Filter">
-              </div>
-              causeofdeath
-            </th>
-            <th>
-              <div class="d-flex flex-row">
-                <input [(ngModel)]="SponsorNameFilter" class="form-control"
-                (keyup)="FilterFunction()" placeholder="Filter">
-              </div>
-              sponsorname
-            </th>
-            <th>
-              <div class="d-flex flex-row">
-                <input [(ngModel)]="FamilyStatusFilter" class="form-control"
-                (keyup)="FilterFunction()" placeholder="Filter">
-              </div>
-              familystatus
+              Phone Number
             </th>
             <th>Options</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let item of FamilyList">
-            <td>{{ item.id }}</td>
             <td>{{ item.cin }}</td>
-            <td>{{ item.first_name }}</td>
-            <td>{{ item.last_name }}</td>
-            <td>{{ item.sex }}</td>
+            <td>{{ item.first_name + ' ' + item.last_name }}</td>
             <td>{{ item.birthdate }}</td>
-            <td>{{ item.address }}</td>
             <td>{{ item.phone }}</td>
-            <td>{{ item.health_insurance }}</td>
-            <td>{{ item.job }}</td>
-            <td>{{ item.income }}</td>
-            <td>{{ item.home_status }}</td>
-            <td>{{ item.home_owner }}</td>
-            <td>{{ item.health_status }}</td>
-            <td>{{ item.deceased_parent_name }}</td>
-            <td>{{ item.cause_of_death }}</td>
-            <td>{{ item.sponsor_name }}</td>
-            <td>{{ item.family_status }}</td>  
+
             
             <td>
+              <button type="button" class="btn btn-light mr-1"
+              data-toggle="modal" 
+              data-target="#exampleModal"
+              (click)="infoClick(item)"
+              data-backdrop="static" data-keyboard="false"
+              >
+                <!--Info-->
+                  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                    <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                   <path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z"/>
+                    <circle cx="8" cy="4.5" r="1"/>
+                  </svg>
+              </button>
               <button type="button" class="btn btn-light mr-1"
               data-toggle="modal" 
               data-target="#exampleModal"
