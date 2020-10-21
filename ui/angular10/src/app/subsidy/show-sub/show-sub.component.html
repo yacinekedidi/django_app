@@ -53,6 +53,20 @@ data-backdrop="static" data-keyboard="false">
             </th>
             <th>
               <div class="d-flex flex-row">
+              <input [(ngModel)]="AgeMinFilter" class="form-control"
+              (keyup)="FilterFunction()" placeholder="Filter">
+              </div>
+              Min Age
+            </th>
+            <th>
+              <div class="d-flex flex-row">
+              <input [(ngModel)]="AgeMaxFilter" class="form-control"
+              (keyup)="FilterFunction()" placeholder="Filter">
+              </div>
+              Max Age
+            </th>
+            <th>
+              <div class="d-flex flex-row">
               <input [(ngModel)]="AmountFilter" class="form-control"
               (keyup)="FilterFunction()" placeholder="Filter">
               </div>
@@ -67,6 +81,8 @@ data-backdrop="static" data-keyboard="false">
             <td>{{ item.sub_type }}</td>
             <td>{{ item.title }}</td>
             <td>{{ item.gender }}</td>
+            <td>{{ item.age_min }}</td>
+            <td>{{ item.age_max }}</td>
             <td>{{ item.amount + ' ' + item.unit }}</td>
             <td>
               <button type="button" class="btn btn-light mr-1"

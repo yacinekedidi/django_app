@@ -17,8 +17,7 @@ export class ShowOrphComponent implements OnInit {
 
   IdFilter:string="";
   FamilyIdFilter:string="";
-  FirstNameFilter:string="";
-  LastNameFilter:string="";
+  NameFilter:string="";
   SexFilter:string="";
   BirthdateFilter:string="";
   HobbiesFilter:string="";
@@ -111,8 +110,7 @@ export class ShowOrphComponent implements OnInit {
   FilterFunction(){
     var IdFilter = this.IdFilter;
     var FamilyIdFilter = this.FamilyIdFilter;
-    var FirstNameFilter = this.FirstNameFilter;
-    var LastNameFilter = this.LastNameFilter;
+    var NameFilter = this.NameFilter;
     var SexFilter = this.SexFilter;
     var BirthdateFilter = this.BirthdateFilter;
     var HobbiesFilter = this.HobbiesFilter;
@@ -120,18 +118,15 @@ export class ShowOrphComponent implements OnInit {
     var HealthStatusFilter = this.HealthStatusFilter;
 
     this.OrphanList = this.OrphanListWithoutFilter.filter(function(el){
-
+      var Name = el.first_name.concat(el.last_name)
       return el.id.toString().toLowerCase().startsWith(
         IdFilter.toString().trim().toLowerCase()
       ) &&
       el.family_id.toString().toLowerCase().startsWith(
         FamilyIdFilter.toString().trim().toLowerCase()
       ) &&
-      el.first_name.toString().toLowerCase().startsWith(
-        FirstNameFilter.toString().trim().toLowerCase()
-      ) &&
-      el.last_name.toString().toLowerCase().startsWith(
-        LastNameFilter.toString().trim().toLowerCase()
+      el.Name.toLowerCase().includes(
+        NameFilter.toString().trim().toLowerCase()
       ) &&
       el.sex.toString().toLowerCase().startsWith(
         SexFilter.toString().trim().toLowerCase()

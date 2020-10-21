@@ -64,17 +64,24 @@ data-backdrop="static" data-keyboard="false"
             </th>
             <th>
               <div class="d-flex flex-row">
-                <input [(ngModel)]="BirthdateFilter" class="form-control"
+                <input [(ngModel)]="JobFilter" class="form-control"
                 (keyup)="FilterFunction()" placeholder="Filter">
               </div>
-              Birthdate
+              Job
             </th>
             <th>
               <div class="d-flex flex-row">
-                <input [(ngModel)]="PhoneFilter" class="form-control"
+                <input [(ngModel)]="AddressFilter" class="form-control"
                 (keyup)="FilterFunction()" placeholder="Filter">
               </div>
-              Phone Number
+              Address
+            </th>
+            <th>
+              <div class="d-flex flex-row">
+                <input [(ngModel)]="HealthInsuranceFilter" class="form-control"
+                (keyup)="FilterFunction()" placeholder="Filter">
+              </div>
+              Health Insurance
             </th>
             <th>Options</th>
         </tr>
@@ -83,12 +90,13 @@ data-backdrop="static" data-keyboard="false"
         <tr *ngFor="let item of FamilyList">
             <td>{{ item.cin }}</td>
             <td>{{ item.first_name + ' ' + item.last_name }}</td>
-            <td>{{ item.birthdate }}</td>
-            <td>{{ item.phone }}</td>
+            <td>{{ item.job }}</td>
+            <td>{{ item.address }}</td>
+            <td>{{ item.health_insurance }}</td>
             
 
             <td>
-              <button type="button" class="btn btn-light mr-1"
+              <button type="button" class="btn btn-light mr-0"
               data-toggle="modal" 
               data-target="#exampleModal"
               (click)="infoClick(item)"
@@ -102,7 +110,7 @@ data-backdrop="static" data-keyboard="false"
                     <circle cx="8" cy="4.5" r="1"/>
                   </svg>
               </button>
-              <button type="button" class="btn btn-light mr-1"
+              <button type="button" class="btn btn-light mr-0"
               data-toggle="modal" 
               data-target="#exampleModal"
               (click)="editClick(item)"
@@ -114,7 +122,7 @@ data-backdrop="static" data-keyboard="false"
                     <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
                   </svg>
               </button>
-                <button type="button" class="btn btn-light mr-1"
+                <button type="button" class="btn btn-light mr-0"
                 (click)="deleteClick(item)">
                     <!--Delete-->
                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-trash-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
