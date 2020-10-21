@@ -40,7 +40,6 @@ export class ShowFamComponent implements OnInit {
 
 
 
-
   ngOnInit(): void {
     this.refreshFamList();
   }
@@ -78,6 +77,7 @@ export class ShowFamComponent implements OnInit {
     this.ModalTitle="Edit Family";
     this.ActivateAddEditFamComp=true;
     this.ActivateInfoFamComp=false;
+   
   }
   infoClick(item){
     this.fam=item;
@@ -98,7 +98,6 @@ export class ShowFamComponent implements OnInit {
 
   }
 
-
   closeClick(){
     this.ActivateAddEditFamComp=false;
     this.refreshFamList();
@@ -109,10 +108,12 @@ export class ShowFamComponent implements OnInit {
   refreshFamList(){
     this.service.getFamList().subscribe(data=>{
       this.FamilyList=data;
-
       this.FamilyListWithoutFilter = data;
       
     });
+  
+  
+  
   }
 
   FilterFunction(){
@@ -189,6 +190,20 @@ export class ShowFamComponent implements OnInit {
       ) 
     })
   
+  }
+
+
+  sortResult(param:any, flag:boolean){
+    this.FamilyList = this.FamilyListWithoutFilter.sort(function(x, y){
+      if(flag)
+      {
+        return (x[param] > y[param])?1 : ((x[param] < y[param]) ?-1: 0);
+      } else {
+        return (y[param] > x[param])?1 : ((y[param] < x[param]) ?-1: 0);
+      }
+
+
+    })
   }
 
 }

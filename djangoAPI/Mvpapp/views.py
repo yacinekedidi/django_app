@@ -13,9 +13,14 @@ from Mvpapp.serializers import FamilySerializer, OrphanSerializer, OrphanEducati
 @csrf_exempt
 def familyApi(request, id=0):
     if request.method == 'GET':
-        families = Family.objects.all()
-        families_serializer = FamilySerializer(families, many=True)
-        return JsonResponse(families_serializer.data, safe=False)
+        if id == 0:
+            families = Family.objects.all()
+            families_serializer = FamilySerializer(families, many=True)
+            return JsonResponse(families_serializer.data, safe=False)
+        else:
+            fam = Family.objects.get(id=id)
+            fam_serializer = FamilySerializer(fam)
+            return JsonResponse(fam_serializer.data, safe=False)
 
     elif request.method == 'POST':
         family_data = JSONParser().parse(request)
@@ -23,8 +28,11 @@ def familyApi(request, id=0):
         if family_serializer.is_valid():
             family_serializer.save()
             return JsonResponse("Added Successfully", safe=False)
-        print(family_serializer.errors)
-        return JsonResponse("Failed to add", safe=False)
+        #print(family_serializer.errors)
+        d = {}
+        for i in family_serializer.errors.keys():
+            d[i] = family_serializer.errors[i]
+        return JsonResponse([str(k + ": " + v[0] + "\n") for k, v in d.items()], safe=False)
     elif request.method == 'PUT':
         family_data = JSONParser().parse(request)
         # print(family_data['id'])

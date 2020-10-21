@@ -10,7 +10,7 @@ gender = (
 class Family(models.Model):
 
     id = models.AutoField(primary_key=True)
-    cin = models.CharField(max_length=20)
+    cin = models.CharField(max_length=20, unique=True)
     first_name = models.CharField(max_length=20)
     last_name = models.CharField(max_length=20)
     sex = models.CharField(max_length=20, choices=gender, default="male")
@@ -22,7 +22,7 @@ class Family(models.Model):
     income = models.IntegerField()
     home_status = models.CharField(max_length=20)
     home_owner = models.CharField(max_length=20)
-    health_status = models.CharField(max_length=20)
+    health_status = models.CharField(max_length=20) 
     deceased_parent_name = models.CharField(max_length=20)
     cause_of_death = models.CharField(max_length=20)
     sponsor_name = models.CharField(max_length=20)

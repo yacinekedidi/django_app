@@ -27,11 +27,14 @@ export class ShowOrphComponent implements OnInit {
 
   OrphanListWithoutFilter:any=[];
 
+  //FamilyList:any=[];
+
 
   constructor(private service:SharedService) { }
 
   ngOnInit(): void {
     this.refreshOrphList();
+   
   }
 
   addClick(){
@@ -93,6 +96,16 @@ export class ShowOrphComponent implements OnInit {
       
     });
   }
+
+  /*
+  FamilyListFunc(item:any){
+    this.service.getFamById(item.family_id).subscribe(data=>{
+      this.FamilyList = data;
+    });
+  }
+*/
+
+
 
 
   FilterFunction(){

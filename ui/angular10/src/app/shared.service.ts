@@ -16,6 +16,10 @@ readonly APIUrl = "http://127.0.0.1:8000";
   return this.http.get<any[]>(this.APIUrl + '/family/');
   }
 
+  getFamById(val:any){
+    return this.http.get(this.APIUrl + '/family/', val);
+  }
+
   addFamily(val:any){
   return this.http.post(this.APIUrl + '/family/',val);
   }
