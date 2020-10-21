@@ -1,0 +1,977 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"res",
+				"rest_framework"
+			],
+			[
+				"Fam",
+				"FamilySerializer"
+			],
+			[
+				"review",
+				"reviews"
+			],
+			[
+				"reve",
+				"reviews"
+			],
+			[
+				"fu",
+				"fullname"
+			],
+			[
+				"na",
+				"nameeee"
+			],
+			[
+				"l",
+				"length"
+			],
+			[
+				"Re",
+				"Reviews"
+			],
+			[
+				"da",
+				"data"
+			],
+			[
+				"re",
+				"reviews"
+			],
+			[
+				"di",
+				"dictIds"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"wi",
+				"width\tproperty"
+			],
+			[
+				"margi",
+				"margin-left\tproperty"
+			],
+			[
+				"margin",
+				"margin-right\tproperty"
+			],
+			[
+				"space",
+				"space-between\tjustify-content"
+			],
+			[
+				"data",
+				"data-id"
+			],
+			[
+				"cah",
+				"cache_id"
+			],
+			[
+				"h",
+				"html\thtml"
+			],
+			[
+				"cha",
+				"characters"
+			],
+			[
+				"i",
+				"i"
+			],
+			[
+				"cons",
+				"console"
+			],
+			[
+				"c",
+				"characters"
+			],
+			[
+				"u",
+				"utf-8"
+			],
+			[
+				"my",
+				"myArgs"
+			],
+			[
+				"fil",
+				"filteredArray"
+			],
+			[
+				"__",
+				"__rings"
+			],
+			[
+				"team",
+				"teams_count"
+			],
+			[
+				"te",
+				"teams_count"
+			],
+			[
+				"m",
+				"myArgs"
+			],
+			[
+				"f",
+				"factorial"
+			],
+			[
+				"curr",
+				"current_character"
+			],
+			[
+				"user",
+				"user_id"
+			],
+			[
+				"R",
+				"Review"
+			],
+			[
+				"to",
+				"to_dict"
+			],
+			[
+				"a",
+				"amenities"
+			],
+			[
+				"cit",
+				"cities"
+			],
+			[
+				"pla",
+				"places_obj"
+			],
+			[
+				"amn",
+				"amenity"
+			],
+			[
+				"all",
+				"all_amenities"
+			],
+			[
+				"ci",
+				"cities"
+			],
+			[
+				"st",
+				"states"
+			],
+			[
+				"amen",
+				"amenity"
+			],
+			[
+				"am",
+				"amenity"
+			],
+			[
+				"amenit",
+				"amenities"
+			],
+			[
+				"ame",
+				"amenities"
+			],
+			[
+				"amenity",
+				"amenity"
+			],
+			[
+				"pass",
+				"passw"
+			],
+			[
+				"pas",
+				"passw"
+			],
+			[
+				"new",
+				"new_dict"
+			],
+			[
+				"ne",
+				"new_dict"
+			],
+			[
+				"state",
+				"state_id"
+			],
+			[
+				"city",
+				"city_id"
+			],
+			[
+				"json",
+				"jsonify"
+			],
+			[
+				"n",
+				"nexus6"
+			],
+			[
+				"lis",
+				"listint_t"
+			],
+			[
+				"pr",
+				"print_array"
+			],
+			[
+				"web-",
+				"web-01"
+			],
+			[
+				"w",
+				"without_sub"
+			],
+			[
+				"we",
+				"web-02"
+			],
+			[
+				"do",
+				"do_deploy"
+			],
+			[
+				"s",
+				"sqlalchemy"
+			],
+			[
+				"session",
+				"session_factory"
+			],
+			[
+				"de",
+				"delete"
+			],
+			[
+				"cla",
+				"cls_name"
+			],
+			[
+				"cls",
+				"cls_name"
+			],
+			[
+				"d",
+				"do_quit"
+			],
+			[
+				"str",
+				"strip"
+			],
+			[
+				"jo",
+				"join_cs"
+			],
+			[
+				"ses",
+				"session"
+			],
+			[
+				"level",
+				"level-1"
+			],
+			[
+				"print",
+				"printLevelOrder"
+			],
+			[
+				"binary",
+				"binary_tree_levelorder"
+			],
+			[
+				"binar",
+				"binary_tree_levelorder"
+			],
+			[
+				"bin",
+				"binary_tree_levelorder"
+			],
+			[
+				"bina",
+				"binary_tree_height"
+			],
+			[
+				"size",
+				"size_t"
+			],
+			[
+				"std",
+				"stdlib.h\tstandard header"
+			],
+			[
+				"bi",
+				"binary_tree_preorder"
+			],
+			[
+				"binary_tree",
+				"binary_tree_t"
+			],
+			[
+				"ts",
+				"ts"
+			],
+			[
+				"tv_show",
+				"tv_show_genres"
+			],
+			[
+				"ratings",
+				"ratings"
+			],
+			[
+				"tv_gen",
+				"tv_genres"
+			],
+			[
+				"number",
+				"number_of_shows"
+			],
+			[
+				"show",
+				"show_id"
+			],
+			[
+				"genre",
+				"genre_id"
+			],
+			[
+				"gen",
+				"genre_id"
+			],
+			[
+				"stat",
+				"state_id"
+			],
+			[
+				"avg",
+				"avg_temp"
+			],
+			[
+				"Se",
+				"second_table"
+			],
+			[
+				"alig",
+				"align-items\tproperty"
+			],
+			[
+				"padd",
+				"padding-bottom\tproperty"
+			],
+			[
+				"mar",
+				"margin-bottom\tproperty"
+			],
+			[
+				"ali",
+				"align-items\tproperty"
+			],
+			[
+				"fle",
+				"flex-start\talign-content"
+			],
+			[
+				"flex",
+				"flex-direction\tproperty"
+			],
+			[
+				"co",
+				"column-reverse\tflex-direction"
+			],
+			[
+				"align",
+				"align-items\tproperty"
+			],
+			[
+				"paddi",
+				"padding\tproperty"
+			],
+			[
+				"marg",
+				"margin-left\tproperty"
+			],
+			[
+				"back",
+				"background-image\tproperty"
+			],
+			[
+				"borde",
+				"border-bottom\tproperty"
+			],
+			[
+				"padding",
+				"padding-left\tproperty"
+			],
+			[
+				"pa",
+				"padding\tproperty"
+			],
+			[
+				"bac",
+				"background-position\tproperty"
+			],
+			[
+				"of",
+				"overflow\tproperty"
+			],
+			[
+				"min",
+				"min-width\tproperty"
+			],
+			[
+				"in",
+				"inline-block\tdisplay"
+			],
+			[
+				"bor",
+				"border-width\tproperty"
+			],
+			[
+				"paddin",
+				"padding\tproperty"
+			],
+			[
+				"text",
+				"text-align\tproperty"
+			],
+			[
+				"inl",
+				"inline\tdisplay"
+			],
+			[
+				"bord",
+				"border-radius\tproperty"
+			],
+			[
+				"pad",
+				"padding\tproperty"
+			],
+			[
+				"font",
+				"font-size\tproperty"
+			],
+			[
+				"li",
+				"li\tTag"
+			],
+			[
+				"ma",
+				"margin-bottom\tproperty"
+			],
+			[
+				"fnt",
+				"font-weight\tproperty"
+			],
+			[
+				"border",
+				"border-right\tproperty"
+			],
+			[
+				"fl",
+				"flex\tproperty"
+			],
+			[
+				"cent",
+				"align-content\tproperty"
+			],
+			[
+				"max",
+				"max-width\tproperty"
+			],
+			[
+				"backg",
+				"background-position\tproperty"
+			],
+			[
+				"clo",
+				"color\tproperty"
+			],
+			[
+				"al",
+				"align-items\tproperty"
+			],
+			[
+				"backgoun",
+				"background-color\tproperty"
+			],
+			[
+				"head",
+				"header\tTag"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Mvpapp/models.py",
+			"settings":
+			{
+				"buffer_size": 2956,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Mvpapp/views.py",
+			"settings":
+			{
+				"buffer_size": 7564,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"menu",
+				"View: Toggle Menu"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"insa",
+				"Package Control: Install Package"
+			],
+			[
+				"terminus",
+				"Terminus: Open Default Shell in Tab (View)"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"termin",
+				"Terminus: Open Default Shell in Tab (View)"
+			],
+			[
+				"terminal vi",
+				"Preferences: Terminal View: Keybindings"
+			],
+			[
+				"terminalvi",
+				"Preferences: Terminal View: Keybindings"
+			],
+			[
+				"term",
+				"Preferences: Terminus Settings"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"instak",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"View Package File"
+			],
+			[
+				"installp",
+				"Package Control: Install Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"sublrepl",
+				"Build With: sublimerepl_build_system_hack"
+			],
+			[
+				"intsa",
+				"Package Control: Install Package"
+			],
+			[
+				"pretty ",
+				"Preferences: Settings – Syntax Specific"
+			],
+			[
+				"terinalvie",
+				"Terminal View: Open Bash Terminal"
+			],
+			[
+				"terminalv",
+				"Preferences: Terminal View: Color Scheme"
+			],
+			[
+				"ter",
+				"Terminal: Open"
+			],
+			[
+				"Terminal",
+				"Terminal: Open"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 178.0,
+		"history":
+		[
+			"help",
+			"ls"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/yacine/djangoAngular/djangoAPI/djangoAPI/settings.py",
+		"/home/yacine/djangoAngular/djangoAPI/Mvpapp/models.py",
+		"/home/yacine/djangoAngular/djangoAPI/Mvpapp/urls.py",
+		"/home/yacine/Portfolio_v1/models/orphan.py",
+		"/home/yacine/Portfolio_v1/models/family.py",
+		"/home/yacine/Portfolio_v1/models/orphan_education.py",
+		"/home/yacine/Portfolio_v1/models/subsidy.py",
+		"/home/yacine/Portfolio_v1/models/base_model.py",
+		"/home/yacine/AirBnB_clone_v4/web_flask/7-states_list.py",
+		"/home/yacine/AirBnB_clone_v4/web_dynamic/100-hbnb.py",
+		"/home/yacine/AirBnB_clone_v4/web_flask/0-hello_route.py",
+		"/home/yacine/AirBnB_clone_v4/api/v1/views/places_amenities.py",
+		"/home/yacine/AirBnB_clone_v4/api/v1/views/amenities.py",
+		"/home/yacine/AirBnB_clone/test_save_reload_base_model.py",
+		"/home/yacine/AirBnB_clone/test_base_model_dict.py",
+		"/home/yacine/AirBnB_clone/test_base_model.py",
+		"/home/yacine/AirBnB_clone/test_save_reload_user.py",
+		"/home/yacine/AirBnB_clone_v4/web_flask/templates/7-states_list.html",
+		"/home/yacine/AirBnB_clone_v4/web_dynamic/101-hbnb.py",
+		"/home/yacine/AirBnB_clone_v4/api/v1/views/states.py",
+		"/home/yacine/codeforces/angular help",
+		"/home/yacine/holberton-system_engineering-devops/0x16-api_advanced/my service",
+		"/home/yacine/holberton-system_engineering-devops/0x1A-application_server/their service",
+		"/home/yacine/holberton-system_engineering-devops/0x0C-web_server/4-not_found_page_404",
+		"/home/yacine/holberton-system_engineering-devops/0x1B-web_stack_debugging_4/1-user_limit.pp",
+		"/home/yacine/holberton-system_engineering-devops/0x1B-web_stack_debugging_4/0-the_sky_is_the_limit_not.pp",
+		"/home/yacine/holberton-system_engineering-devops/0x1A-application_server/4-reload_gunicorn_no_downtime",
+		"/home/yacine/holberton-system_engineering-devops/0x1A-application_server/5-app_server-nginx_config",
+		"/home/yacine/holberton-system_engineering-devops/0x1A-application_server/3-app_server-nginx_config",
+		"/home/yacine/holberton-system_engineering-devops/0x1A-application_server/2-app_server-nginx_config",
+		"/home/yacine/holberton-system_engineering-devops/0x1A-application_server/4-app_server-nginx_config",
+		"/home/yacine/holberton-system_engineering-devops/0x1A-application_server/README.md",
+		"/home/yacine/codeforces/api hack day",
+		"/home/yacine/holberton-system_engineering-devops/0x0A-configuration_management/2-execute_a_command.pp",
+		"/home/yacine/holberton-system_engineering-devops/0x17-web_stack_debugging_3/0-strace_is_your_friend.pp",
+		"/home/yacine/holberton-system_engineering-devops/0x18-webstack_monitoring/0x17-web_stack_debugging_3/0-strace_is_your_friend.pp",
+		"/home/yacine/holberton-system_engineering-devops/0x0A-configuration_management/0-create_a_file.pp",
+		"/home/yacine/holberton-system_engineering-devops/0x0A-configuration_management/1-install_a_package.pp",
+		"/home/yacine/holberton-system_engineering-devops/0x18-webstack_monitoring/0x17-web_stack_debugging_3/README.md",
+		"/etc/ssh/ssh_config",
+		"/home/yacine/holberton-system_engineering-devops/0x18-webstack_monitoring/2-setup_datadog",
+		"/home/yacine/0x01-Fix_My_Code_Challenge/square.py",
+		"/home/yacine/AirBnB_clone_v4/web_dynamic/static/scripts/101-hbnb.js",
+		"/home/yacine/AirBnB_clone_v4/web_dynamic/templates/101-hbnb.html",
+		"/home/yacine/AirBnB_clone/web_static/100-index.html",
+		"/home/yacine/AirBnB_clone_v4/api/v1/views/places_reviews.py",
+		"/home/yacine/AirBnB_clone_v4/web_dynamic/static/scripts/100-hbnb.js",
+		"/home/yacine/AirBnB_clone_v4/api/v1/views/places.py",
+		"/home/yacine/AirBnB_clone_v4/web_dynamic/templates/100-hbnb.html",
+		"/home/yacine/AirBnB_clone_v4/web_dynamic/4-hbnb.py",
+		"/home/yacine/AirBnB_clone_v4/web_dynamic/templates/4-hbnb.html",
+		"/home/yacine/AirBnB_clone_v4/web_dynamic/static/scripts/4-hbnb.js",
+		"/home/yacine/AirBnB_clone_v4/web_dynamic/static/scripts/3-hbnb.js",
+		"/home/yacine/AirBnB_clone_v4/web_dynamic/static/scripts/2-hbnb.js",
+		"/home/yacine/AirBnB_clone_v4/web_dynamic/templates/3-hbnb.html",
+		"/home/yacine/AirBnB_clone_v4/web_dynamic/3-hbnb.py",
+		"/home/yacine/AirBnB_clone_v4/web_dynamic/static/scripts/4-hbnb.py",
+		"/home/yacine/AirBnB_clone_v4/web_dynamic/2-hbnb.py",
+		"/home/yacine/AirBnB_clone_v4/web_dynamic/templates/2-hbnb.html",
+		"/home/yacine/AirBnB_clone_v4/api/v1/app.py",
+		"/home/yacine/AirBnB_clone_v4/web_dynamic/static/scripts/1-hbnb.js",
+		"/home/yacine/AirBnB_clone_v4/web_dynamic/templates/1-hbnb.html",
+		"/home/yacine/AirBnB_clone_v4/web_dynamic/1-hbnb.py",
+		"/home/yacine/AirBnB_clone_v4/web_dynamic/static/styles/3-header.css",
+		"/home/yacine/holbertonschool-higher_level_programming/0x15-javascript-web_jquery/103-script.js",
+		"/home/yacine/holbertonschool-higher_level_programming/0x15-javascript-web_jquery/103-main.html",
+		"/home/yacine/codeforces/a.html",
+		"/home/yacine/AirBnB_clone_v3/api/v1/views/amenities.py",
+		"/home/yacine/AirBnB_clone_v3/api/v1/views/places.py",
+		"/home/yacine/AirBnB_clone_v4/api/v1/views/documentation/place/get_place.yml",
+		"/home/yacine/AirBnB_clone_v3/web_static/8-index.html",
+		"/home/yacine/AirBnB_clone_v3/web_static/0-index.html",
+		"/home/yacine/AirBnB_clone_v4/web_dynamic/templates/0-hbnb.html",
+		"/home/yacine/AirBnB_clone_v4/web_dynamic/0-hbnb.py",
+		"/home/yacine/AirBnB_clone_v4/web_dynamic/0-hbnb.html",
+		"/home/yacine/AirBnB_clone_v4/README.md",
+		"/home/yacine/.config/sublime-text-3/Packages/Terminus/Default.sublime-keymap",
+		"/home/yacine/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/yacine/holbertonschool-higher_level_programming/0x15-javascript-web_jquery/102-script.js",
+		"/home/yacine/holbertonschool-higher_level_programming/0x15-javascript-web_jquery/101-script.js",
+		"/home/yacine/holbertonschool-higher_level_programming/0x15-javascript-web_jquery/100-script.js",
+		"/home/yacine/holbertonschool-higher_level_programming/0x15-javascript-web_jquery/9-script.js",
+		"/home/yacine/holbertonschool-higher_level_programming/0x15-javascript-web_jquery/8-script.js",
+		"/home/yacine/holbertonschool-higher_level_programming/0x15-javascript-web_jquery/7-script.js",
+		"/home/yacine/holbertonschool-higher_level_programming/0x15-javascript-web_jquery/6-script.js",
+		"/home/yacine/holbertonschool-higher_level_programming/0x15-javascript-web_jquery/5-script.js",
+		"/home/yacine/holbertonschool-higher_level_programming/0x15-javascript-web_jquery/4-script.js",
+		"/home/yacine/holbertonschool-higher_level_programming/0x15-javascript-web_jquery/3-script.js",
+		"/home/yacine/holbertonschool-higher_level_programming/0x15-javascript-web_jquery/2-script.js",
+		"/home/yacine/holbertonschool-higher_level_programming/0x15-javascript-web_jquery/1-script.js",
+		"/home/yacine/holbertonschool-higher_level_programming/0x15-javascript-web_jquery/0-script.js",
+		"/home/yacine/holbertonschool-higher_level_programming/0x15-javascript-web_jquery/0-main.html",
+		"/home/yacine/holbertonschool-higher_level_programming/0x15-javascript-web_jquery/102-main.html",
+		"/home/yacine/holbertonschool-higher_level_programming/0x15-javascript-web_jquery/101-main.html",
+		"/home/yacine/holbertonschool-higher_level_programming/0x15-javascript-web_jquery/100-main.html",
+		"/home/yacine/holbertonschool-higher_level_programming/0x15-javascript-web_jquery/9-main.html",
+		"/home/yacine/holbertonschool-higher_level_programming/0x15-javascript-web_jquery/8-main.html",
+		"/home/yacine/holbertonschool-higher_level_programming/0x15-javascript-web_jquery/7-main.html",
+		"/home/yacine/holbertonschool-higher_level_programming/0x15-javascript-web_jquery/6-main.html",
+		"/home/yacine/holbertonschool-higher_level_programming/0x15-javascript-web_jquery/5-main.html",
+		"/home/yacine/holbertonschool-higher_level_programming/0x15-javascript-web_jquery/4-main.html",
+		"/home/yacine/holbertonschool-higher_level_programming/0x15-javascript-web_jquery/3-main.html",
+		"/home/yacine/holbertonschool-higher_level_programming/0x15-javascript-web_jquery/2-main.html",
+		"/home/yacine/holbertonschool-higher_level_programming/0x15-javascript-web_jquery/1-main.html",
+		"/home/yacine/codeforces/testing.js",
+		"/home/yacine/codeforces/index.html",
+		"/home/yacine/holbertonschool-higher_level_programming/0x15-javascript-web_jquery/README.md",
+		"/home/yacine/codeforces/first_game.py",
+		"/home/yacine/codeforces/untitled.py",
+		"/home/yacine/holbertonschool-higher_level_programming/0x14-javascript-web_scraping/101-starwars_characters.js",
+		"/home/yacine/holbertonschool-higher_level_programming/0x14-javascript-web_scraping/101-starwars_characters.sublime-workspace",
+		"/home/yacine/.config/sublime-text-3/Packages/Terminus/Terminus.sublime-settings",
+		"/home/yacine/.config/sublime-text-3/Packages/User/Terminus.sublime-settings",
+		"/home/yacine/.config/sublime-text-3/Packages/Terminal/Terminal.sublime-settings",
+		"/home/yacine/codeforces/m.py",
+		"/home/yacine/codeforces/playoffs.py",
+		"/home/yacine/holberton-system_engineering-devops/0x15-api/3-dictionary_of_list_of_dictionaries.py",
+		"/home/yacine/codeforces/delete_this.py",
+		"/home/yacine/holbertonschool-higher_level_programming/0x11-python-network_1/103-search_twitter.py",
+		"/home/yacine/holbertonschool-higher_level_programming/0x11-python-network_1/5-hbtn_header.py",
+		"/home/yacine/holbertonschool-higher_level_programming/0x11-python-network_1/8-json_api.py",
+		"/home/yacine/0x01-Fix_My_Code_Challenge/user.py",
+		"/home/yacine/0x01-Fix_My_Code_Challenge/status_server/api/v1/views/index.py",
+		"/home/yacine/holbertonschool-higher_level_programming/0x14-javascript-web_scraping/2-statuscode.js",
+		"/home/yacine/holbertonschool-higher_level_programming/0x14-javascript-web_scraping/0-readme.js",
+		"/home/yacine/holbertonschool-higher_level_programming/0x14-javascript-web_scraping/1-writeme.js",
+		"/home/yacine/holbertonschool-higher_level_programming/0x14-javascript-web_scraping/3-starwars_title.js",
+		"/home/yacine/holbertonschool-higher_level_programming/0x14-javascript-web_scraping/4-starwars_count.js"
+	],
+	"find":
+	{
+		"height": 33.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Mvpapp/models.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2956,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								191,
+								191
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1308.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Mvpapp/views.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7564,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1412,
+								1412
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 565.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 33.0
+	},
+	"input":
+	{
+		"height": 42.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.Terminus":
+	{
+		"height": 144.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 144.0
+	},
+	"pinned_build_system": "",
+	"project": "a.sublime-project",
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 132.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
