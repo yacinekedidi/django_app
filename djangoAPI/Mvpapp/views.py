@@ -41,7 +41,10 @@ def familyApi(request, id=0):
         if family_serializer.is_valid():
             family_serializer.save()
             return JsonResponse("Updated Successfully!!", safe=False)
-        return JsonResponse("Failed to Update.", safe=False)
+        d = {}
+        for i in family_serializer.errors.keys():
+            d[i] = family_serializer.errors[i]
+        return JsonResponse([str(k + ": " + v[0] + "\n") for k, v in d.items()], safe=False)
     elif request.method == 'DELETE':
         family = Family.objects.get(id=id)
         family.delete()
@@ -62,7 +65,10 @@ def orphanApi(request, id=0):
             orphan_serializer.save()
             return JsonResponse("Added Successfully", safe=False)
         print(orphan_serializer.errors)
-        return JsonResponse("Failed to add", safe=False)
+        d = {}
+        for i in orphan_serializer.errors.keys():
+            d[i] = orphan_serializer.errors[i]
+        return JsonResponse([str(k + ": " + v[0] + "\n") for k, v in d.items()], safe=False)
     elif request.method == 'PUT':
         orphan_data = JSONParser().parse(request)
         # print(orphan_data['id'])
@@ -71,7 +77,10 @@ def orphanApi(request, id=0):
         if orphan_serializer.is_valid():
             orphan_serializer.save()
             return JsonResponse("Updated Successfully!!", safe=False)
-        return JsonResponse("Failed to Update.", safe=False)
+        d = {}
+        for i in orphan_serializer.errors.keys():
+            d[i] = orphan_serializer.errors[i]
+        return JsonResponse([str(k + ": " + v[0] + "\n") for k, v in d.items()], safe=False)
     elif request.method == 'DELETE':
         orphan = Orphan.objects.get(id=id)
         orphan.delete()
@@ -92,7 +101,10 @@ def subsidyApi(request, id=0):
             subsidy_serializer.save()
             return JsonResponse("Added Successfully", safe=False)
         print(subsidy_serializer.errors)
-        return JsonResponse("Failed to add", safe=False)
+        d = {}
+        for i in subsidy_serializer.errors.keys():
+            d[i] = subsidy_serializer.errors[i]
+        return JsonResponse([str(k + ": " + v[0] + "\n") for k, v in d.items()], safe=False)
     elif request.method == 'PUT':
         subsidy_data = JSONParser().parse(request)
         subsidy = Subsidy.objects.get(id=subsidy_data['id'])
@@ -100,7 +112,10 @@ def subsidyApi(request, id=0):
         if subsidy_serializer.is_valid():
             subsidy_serializer.save()
             return JsonResponse("Updated Successfully!!", safe=False)
-        return JsonResponse("Failed to Update.", safe=False)
+        d = {}
+        for i in subsidy_serializer.errors.keys():
+            d[i] = subsidy_serializer.errors[i]
+        return JsonResponse([str(k + ": " + v[0] + "\n") for k, v in d.items()], safe=False)
     elif request.method == 'DELETE':
         subsidy = Subsidy.objects.get(id=id)
         subsidy.delete()
@@ -123,7 +138,10 @@ def orphaneducationApi(request, id=0):
             orphaneducation_serializer.save()
             return JsonResponse("Added Successfully", safe=False)
         # print(orphaneducation_serializer.errors)
-        return JsonResponse("Failed to add", safe=False)
+        d = {}
+        for i in orphaneducation_serializer.errors.keys():
+            d[i] = orphaneducation_serializer.errors[i]
+        return JsonResponse([str(k + ": " + v[0] + "\n") for k, v in d.items()], safe=False)
     elif request.method == 'PUT':
         orphaneducation_data = JSONParser().parse(request)
         orphaneducation = OrphanEducation.objects.get(
@@ -133,7 +151,10 @@ def orphaneducationApi(request, id=0):
         if orphaneducation_serializer.is_valid():
             orphaneducation_serializer.save()
             return JsonResponse("Updated Successfully!!", safe=False)
-        return JsonResponse("Failed to Update.", safe=False)
+        d = {}
+        for i in orphaneducation_serializer.errors.keys():
+            d[i] = orphaneducation_serializer.errors[i]
+        return JsonResponse([str(k + ": " + v[0] + "\n") for k, v in d.items()], safe=False)
     elif request.method == 'DELETE':
         orphaneducation = OrphanEducation.objects.get(id=id)
         orphaneducation.delete()
@@ -156,7 +177,10 @@ def familysubsidyApi(request, id=0):
             familysubsidy_serializer.save()
             return JsonResponse("Added Successfully", safe=False)
         # print(familysubsidy_serializer.errors)
-        return JsonResponse("Failed to add", safe=False)
+        d = {}
+        for i in familysubsidy_serializer.errors.keys():
+            d[i] = familysubsidy_serializer.errors[i]
+        return JsonResponse([str(k + ": " + v[0] + "\n") for k, v in d.items()], safe=False)
     elif request.method == 'PUT':
         familysubsidy_data = JSONParser().parse(request)
         familysubsidy = family_subsidy.objects.get(id=familysubsidy_data['id'])
@@ -165,7 +189,10 @@ def familysubsidyApi(request, id=0):
         if familysubsidy_serializer.is_valid():
             familysubsidy_serializer.save()
             return JsonResponse("Updated Successfully!!", safe=False)
-        return JsonResponse("Failed to Update.", safe=False)
+        d = {}
+        for i in familysubsidy_serializer.errors.keys():
+            d[i] = familysubsidy_serializer.errors[i]
+        return JsonResponse([str(k + ": " + v[0] + "\n") for k, v in d.items()], safe=False)
     elif request.method == 'DELETE':
         familysubsidy = family_subsidy.objects.get(id=id)
         familysubsidy.delete()
