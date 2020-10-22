@@ -101,4 +101,4 @@ class OrphanEducation(models.Model):
 class family_subsidy(models.Model):
     family_id = models.ForeignKey(Family, on_delete=models.CASCADE)
     subsidy_id = models.ForeignKey(Subsidy, on_delete=models.CASCADE)
-    sub_amount = models.IntegerField()
+    sub_amount = models.IntegerField(default=0)
