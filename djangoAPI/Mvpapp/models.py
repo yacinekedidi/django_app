@@ -36,7 +36,7 @@ class Orphan(models.Model):
     last_name = models.CharField(max_length=20)
     sex = models.CharField(max_length=20, choices=gender, default="male")
     birthdate = models.DateField()
-    hobbies = models.CharField(max_length=200, null=True)
+    hobbies = models.CharField(max_length=200, null=True, blank=True)
     education_status = models.CharField(max_length=20)
     health_status = models.CharField(max_length=200)
 
@@ -47,10 +47,10 @@ class Subsidy(models.Model):
     title = models.CharField(max_length=20)
     description = models.CharField(max_length=200)
     price_unit = models.IntegerField(null=True)
-    gender = models.CharField(max_length=20, choices=gender, null=True)
+    gender = models.CharField(max_length=20, choices=gender, null=True, blank=True)
     age_min = models.IntegerField(null=True)
     age_max = models.IntegerField(null=True)
-    status = models.CharField(max_length=20, null=True)
+    status = models.CharField(max_length=20, null=True, blank=True)
     amount = models.IntegerField()
     unit = models.CharField(max_length=20)
 
