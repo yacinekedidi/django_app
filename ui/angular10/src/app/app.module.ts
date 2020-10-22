@@ -19,6 +19,7 @@ import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { MoreInfoComponent } from './family/more-info/more-info.component';
 import { MoreInfoOrphanComponent } from './orphan/more-info-orphan/more-info-orphan.component';
 import { InfoSubComponent } from './subsidy/info-sub/info-sub.component';
+import { ExportAsModule } from 'ngx-export-as';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { InfoSubComponent } from './subsidy/info-sub/info-sub.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ExportAsModule
   ],
   providers: [SharedService],
   bootstrap: [AppComponent]

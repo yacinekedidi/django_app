@@ -1,6 +1,7 @@
+import { element } from 'protractor';
 import { SharedService } from './../../shared.service';
 import { Component, OnInit } from '@angular/core';
-
+import { ExportAsService, ExportAsConfig } from 'ngx-export-as';
 
 @Component({
   selector: 'app-show-fam',
@@ -9,7 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShowFamComponent implements OnInit {
 
-  constructor(private service:SharedService) { }
+  exportAsConfig: ExportAsConfig = {
+    type: 'pdf', // the type you want to download
+    elementIdOrContent: 'my_table' // the id of html/table element
+  }
+
+  constructor(private service:SharedService, private exportAsService: ExportAsService) { }
+
 
   FamilyList:any=[];
   ModalTitle:string;
@@ -204,6 +211,18 @@ export class ShowFamComponent implements OnInit {
 
 
     })
+  }
+
+
+
+  download(){
+    this.exportAsService.save(this.exportAsConfig, 'My File Name').subscribe(() => {
+      // save started
+    });
+    // get the data as base64 or json object for json type - this will be helpful in ionic or SSR
+    this.exportAsService.get(this.exportAsConfig).subscribe(content => {
+      console.log(content);
+    });
   }
 
 }
