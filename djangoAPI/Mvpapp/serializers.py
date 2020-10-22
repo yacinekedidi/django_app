@@ -6,6 +6,9 @@ class FamilySerializer(serializers.ModelSerializer):
     class Meta:
         model = Family
         fields = ('id',
+                  'created_at',
+                  'updated_at',
+                  'show',
                   'cin',
                   'first_name',
                   'last_name',
@@ -29,6 +32,9 @@ class OrphanSerializer(serializers.ModelSerializer):
     class Meta:
         model = Orphan
         fields = ('id',
+                  'created_at',
+                  'updated_at',
+                  'show',
                   'family_id',
                   'first_name',
                   'last_name',
@@ -43,6 +49,9 @@ class SubsidySerializer(serializers.ModelSerializer):
     class Meta:
         model = Subsidy
         fields = ('id',
+                  'created_at',
+                  'updated_at',
+                  'show',
                   'sub_type',
                   'title',
                   'description',
@@ -58,7 +67,11 @@ class SubsidySerializer(serializers.ModelSerializer):
 class FamilySubsidySerializer(serializers.ModelSerializer):
     class Meta:
         model = family_subsidy
-        fields = ('subsidy_id',
+        fields = ('id',
+                  'created_at',
+                  'updated_at',
+                  'show',
+                  'subsidy_id',
                   'family_id',
                   'sub_amount')
 
@@ -67,6 +80,9 @@ class OrphanEducationSerializer(serializers.ModelSerializer):
     class Meta:
         model = OrphanEducation
         fields = ('id',
+                  'created_at',
+                  'updated_at',
+                  'show',
                   'orphan_id',
                   'school',
                   'grade_year',

@@ -5,11 +5,11 @@ gender = (
     ("male", "male"),
     ("female", "female"),
 )
-
-
 class Family(models.Model):
-
     id = models.AutoField(primary_key=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    show = models.BooleanField(default=True)
     cin = models.CharField(max_length=20, unique=True)
     first_name = models.CharField(max_length=20)
     last_name = models.CharField(max_length=20)
@@ -31,6 +31,9 @@ class Family(models.Model):
 
 class Orphan(models.Model):
     id = models.AutoField(primary_key=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    show = models.BooleanField(default=True)
     family_id = models.ForeignKey(Family, on_delete=models.CASCADE)
     first_name = models.CharField(max_length=20)
     last_name = models.CharField(max_length=20)
@@ -43,6 +46,9 @@ class Orphan(models.Model):
 
 class Subsidy(models.Model):
     id = models.AutoField(primary_key=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    show = models.BooleanField(default=True)
     sub_type = models.CharField(max_length=20)
     title = models.CharField(max_length=20)
     description = models.CharField(max_length=200)
@@ -56,6 +62,10 @@ class Subsidy(models.Model):
 
 
 class OrphanEducation(models.Model):
+    id = models.AutoField(primary_key=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    show = models.BooleanField(default=True)
     PRESCHOOL = 'PRE'
     ONE = '1'
     TWO = '2'
@@ -88,17 +98,24 @@ class OrphanEducation(models.Model):
         (THIRTEEN, 'Thirteenth'),
         (UNIVERSITY, 'University'),
     ]
-    id = models.AutoField(primary_key=True)
     orphan_id = models.ForeignKey(Orphan, on_delete=models.CASCADE)
     school = models.CharField(max_length=20)
     grade_year = models.CharField(
-        max_length=20, choices=YEAR_IN_SCHOOL_CHOICES, default=PRESCHOOL)
-    success = models.CharField(max_length=20)
-    score = models.IntegerField()
-    updated = models.IntegerField()
+        max_length=3, choices=YEAR_IN_SCHOOL_CHOICES, default=PRESCHOOL)
+    success = models.BooleanField(default=True)
+    score_1 = models.CharField(max_length=20, null=True, blank=True)
+    score_2 = models.CharField(max_length=20, null=True, blank=True)
+    score_3 = models.CharField(max_length=20, null=True, blank=True)
+    score_final = models.CharField(max_length=20, null=True, blank=True)
+
 
 
 class family_subsidy(models.Model):
+    id = models.AutoField(primary_key=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    show = models.BooleanField(default=True)
     family_id = models.ForeignKey(Family, on_delete=models.CASCADE)
     subsidy_id = models.ForeignKey(Subsidy, on_delete=models.CASCADE)
     sub_amount = models.IntegerField(default=0)
+    updated = models.CharField(max_length=10, null=True, blank=True)

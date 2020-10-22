@@ -6,15 +6,16 @@ from django.http.response import JsonResponse
 
 from Mvpapp.models import Family, Orphan, OrphanEducation, Subsidy, family_subsidy
 from Mvpapp.serializers import FamilySerializer, OrphanSerializer, OrphanEducationSerializer, SubsidySerializer, FamilySubsidySerializer
-
+from datetime import datetime
 # Create your views here.
+# pylint: disable=maybe-no-member
 
 
 @csrf_exempt
 def familyApi(request, id=0):
     if request.method == 'GET':
         if id == 0:
-            families = Family.objects.all()
+            families = Family.objects.all() 
             families_serializer = FamilySerializer(families, many=True)
             return JsonResponse(families_serializer.data, safe=False)
         else:
@@ -135,6 +136,7 @@ def orphaneducationApi(request, id=0):
         orphaneducation_serializer = OrphanEducationSerializer(
             data=orphaneducation_data)
         if orphaneducation_serializer.is_valid():
+
             orphaneducation_serializer.save()
             return JsonResponse("Added Successfully", safe=False)
         # print(orphaneducation_serializer.errors)
@@ -174,6 +176,7 @@ def familysubsidyApi(request, id=0):
         familysubsidy_serializer = FamilySubsidySerializer(
             data=familysubsidy_data)
         if familysubsidy_serializer.is_valid():
+
             familysubsidy_serializer.save()
             return JsonResponse("Added Successfully", safe=False)
         # print(familysubsidy_serializer.errors)
