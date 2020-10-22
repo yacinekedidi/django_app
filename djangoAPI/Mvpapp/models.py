@@ -46,7 +46,7 @@ class Subsidy(models.Model):
     sub_type = models.CharField(max_length=20)
     title = models.CharField(max_length=20)
     description = models.CharField(max_length=200)
-    price_unit = models.IntegerField(null=True)
+    price_unit = models.IntegerField(null=True, blank=True)
     gender = models.CharField(max_length=20, choices=gender, null=True, blank=True)
     age_min = models.IntegerField(null=True)
     age_max = models.IntegerField(null=True)
