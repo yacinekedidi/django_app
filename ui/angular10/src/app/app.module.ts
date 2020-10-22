@@ -20,6 +20,7 @@ import { MoreInfoComponent } from './family/more-info/more-info.component';
 import { MoreInfoOrphanComponent } from './orphan/more-info-orphan/more-info-orphan.component';
 import { InfoSubComponent } from './subsidy/info-sub/info-sub.component';
 import { ExportAsModule } from 'ngx-export-as';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { ExportAsModule } from 'ngx-export-as';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    ExportAsModule
+    ExportAsModule,
+    BrowserAnimationsModule
   ],
   providers: [SharedService],
   bootstrap: [AppComponent]

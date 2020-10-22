@@ -216,13 +216,11 @@ export class ShowFamComponent implements OnInit {
 
 
   download(){
-    this.exportAsService.save(this.exportAsConfig, 'My File Name').subscribe(() => {
+    this.exportAsService.save(this.exportAsConfig, 'families_list').subscribe(() => {
       // save started
     });
     // get the data as base64 or json object for json type - this will be helpful in ionic or SSR
-    this.exportAsService.get(this.exportAsConfig).subscribe(content => {
-      console.log(content);
-    });
+   
   }
 
 }
