@@ -152,4 +152,17 @@ export class ShowSubComponent implements OnInit {
 
   }
 
+  sortResult(param:any, flag:boolean){
+    this.SubsidyList = this.SubsidyListWithoutFilter.sort(function(x, y){
+      if(flag)
+      {
+        return (x[param] > y[param])?1 : ((x[param] < y[param]) ?-1: 0);
+      } else {
+        return (y[param] > x[param])?1 : ((y[param] < x[param]) ?-1: 0);
+      }
+
+
+    })
+  }
+
 }
