@@ -59,7 +59,8 @@ class FamilySubsidySerializer(serializers.ModelSerializer):
     class Meta:
         model = family_subsidy
         fields = ('subsidy_id',
-                  'family_id',)
+                  'family_id',
+                  'sub_amount')
 
 
 class OrphanEducationSerializer(serializers.ModelSerializer):
