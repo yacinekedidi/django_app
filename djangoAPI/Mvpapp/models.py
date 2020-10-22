@@ -52,7 +52,7 @@ class Subsidy(models.Model):
     age_max = models.IntegerField(null=True, blank=True)
     status = models.CharField(max_length=20, null=True, blank=True)
     amount = models.IntegerField()
-    unit = models.CharField(max_length=20)
+    unit = models.CharField(max_length=20, null=True, blank=True)
 
 
 class OrphanEducation(models.Model):
