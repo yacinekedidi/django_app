@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ExportAsConfig, ExportAsService } from 'ngx-export-as';
 import { $ } from 'protractor';
 import { SharedService } from 'src/app/shared.service';
 
@@ -8,6 +9,11 @@ import { SharedService } from 'src/app/shared.service';
   styleUrls: ['./show-orph.component.css']
 })
 export class ShowOrphComponent implements OnInit {
+
+  exportAsConfig: ExportAsConfig = {
+    type: 'pdf', // the type you want to download
+    elementIdOrContent: 'my_table' // the id of html/table element
+  }
 
   OrphanList:any=[];
   ModalTitle:string;
@@ -29,7 +35,7 @@ export class ShowOrphComponent implements OnInit {
   //FamilyList:any=[];
 
 
-  constructor(private service:SharedService) { }
+  constructor(private service:SharedService, private exportAsService: ExportAsService) { }
 
   ngOnInit(): void {
     this.refreshOrphList();
@@ -157,6 +163,14 @@ export class ShowOrphComponent implements OnInit {
 
 
     })
+  }
+
+  download(){
+    this.exportAsService.save(this.exportAsConfig, 'orphans_list').subscribe(() => {
+      // save started
+    });
+    // get the data as base64 or json object for json type - this will be helpful in ionic or SSR
+   
   }
 
 

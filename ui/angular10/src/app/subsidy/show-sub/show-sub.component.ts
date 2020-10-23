@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ExportAsConfig, ExportAsService } from 'ngx-export-as';
 import { SharedService } from 'src/app/shared.service';
 
 @Component({
@@ -8,6 +9,12 @@ import { SharedService } from 'src/app/shared.service';
 })
 
 export class ShowSubComponent implements OnInit {
+  
+  
+  exportAsConfig: ExportAsConfig = {
+    type: 'pdf', // the type you want to download
+    elementIdOrContent: 'my_table' // the id of html/table element
+  }
 
   SubsidyList:any=[]
   ModalTitle:string;
@@ -29,7 +36,8 @@ export class ShowSubComponent implements OnInit {
 
   SubsidyListWithoutFilter:any=[];
 
-  constructor(private service:SharedService) { }
+
+  constructor(private service:SharedService, private exportAsService: ExportAsService) { }
 
   ngOnInit(): void {
     this.refreshSubList();
@@ -163,6 +171,15 @@ export class ShowSubComponent implements OnInit {
 
 
     })
+  }
+
+
+  download(){
+    this.exportAsService.save(this.exportAsConfig, 'subsidies_list').subscribe(() => {
+      // save started
+    });
+    // get the data as base64 or json object for json type - this will be helpful in ionic or SSR
+   
   }
 
 }

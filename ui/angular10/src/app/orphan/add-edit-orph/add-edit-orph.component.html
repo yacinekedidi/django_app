@@ -69,10 +69,10 @@
 
 
 
-<button (click)="addOrphan()" *ngIf="orph.id==0" class="btn btn-primary">
+<button mat-raised-button color="primary" (click)="addOrphan()" *ngIf="orph.id==0" class="btn btn-primary">
     Add
 </button>
 
-<button (click)="updateOrphan()" *ngIf="orph.id!=0" class="btn btn-primary">
+<button mat-raised-button color="primary" (click)="updateOrphan()" *ngIf="orph.id!=0" class="btn btn-primary">
     Update
 </button>

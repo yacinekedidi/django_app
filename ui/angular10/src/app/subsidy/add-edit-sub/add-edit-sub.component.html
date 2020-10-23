@@ -81,10 +81,10 @@
     </div>
 </div>
 
-<button (click)="addSubsidy()" *ngIf="sub.id==0" class="btn btn-primary">
+<button mat-raised-button color="primary" (click)="addSubsidy()" *ngIf="sub.id==0" class="btn btn-primary">
     Add
 </button>
 
-<button (click)="updateSubsidy()" *ngIf="sub.id!=0" class="btn btn-primary">
+<button mat-raised-button color="primary" (click)="updateSubsidy()" *ngIf="sub.id!=0" class="btn btn-primary">
     Update
 </button>
