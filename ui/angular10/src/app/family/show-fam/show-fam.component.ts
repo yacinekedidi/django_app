@@ -195,7 +195,7 @@ export class ShowFamComponent implements OnInit {
       el.family_status.toString().toLowerCase().startsWith(
         FamilyStatusFilter.toString().trim().toLowerCase()
       ) 
-    })
+    });
   
   }
 

@@ -125,7 +125,7 @@ export class ShowOrphComponent implements OnInit {
       el.family_id.toString().toLowerCase().startsWith(
         FamilyIdFilter.toString().trim().toLowerCase()
       ) &&
-      el.Name.toLowerCase().includes(
+      Name.toLowerCase().includes(
         NameFilter.toString().trim().toLowerCase()
       ) &&
       el.sex.toString().toLowerCase().startsWith(

@@ -52,6 +52,9 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatTableModule} from '@angular/material/table';
 import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import { NavComponent } from './nav/nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -69,7 +72,9 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     AddEditSubComponent,
     MoreInfoComponent,
     MoreInfoOrphanComponent,
-    InfoSubComponent
+    InfoSubComponent,
+    NavComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -112,7 +117,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatSnackBarModule,
     MatTableModule,
     MatSortModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    LayoutModule
     
   ],
   providers: [SharedService],
