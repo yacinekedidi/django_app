@@ -17,6 +17,12 @@ export class ShowFamComponent implements OnInit {
 
   constructor(private service:SharedService, private exportAsService: ExportAsService) { }
 
+  isShow = true;
+  toggleDisplay() {
+
+    this.isShow = !this.isShow;
+
+  }
 
   FamilyList:any=[];
   ModalTitle:string;

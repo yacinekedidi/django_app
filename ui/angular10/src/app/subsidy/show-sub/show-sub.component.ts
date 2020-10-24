@@ -15,6 +15,11 @@ export class ShowSubComponent implements OnInit {
     type: 'pdf', // the type you want to download
     elementIdOrContent: 'my_table' // the id of html/table element
   }
+  
+  isShow = true;
+  toggleDisplay() {
+    this.isShow = !this.isShow;
+  }
 
   SubsidyList:any=[]
   ModalTitle:string;

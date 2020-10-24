@@ -25,7 +25,7 @@ class Family(models.Model):
     health_status = models.CharField(max_length=100) 
     deceased_parent_name = models.CharField(max_length=50)
     cause_of_death = models.CharField(max_length=100)
-    sponsor_name = models.CharField(max_length=40, null=True)
+    sponsor_name = models.CharField(max_length=40, null=True, blank=True)
     family_status = models.CharField(max_length=50)
 
 

@@ -1,3 +1,5 @@
+<!-- Button Show/hide filters -->
+<button class="btn btn-primary float-left ml-2" (click)=toggleDisplay()>Filters</button>
 <!-- Button trigger modal -->
 <button mat-raised-button color="accent" type="button" class="btn btn-primary float-right m-2" 
 data-toggle="modal" 
@@ -5,13 +7,13 @@ data-target="#exampleModal"
 (click)="addClick()"
 data-backdrop="static" data-keyboard="false"
 >
-    Add Family
-  </button>
-  <button mat-raised-button color="primary" type="button" class="btn btn-primary float-right m-2" (click)="download()">Download PDF</button>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl" role="document" >
+Add Family
+</button>
+<!-- Button Download PDF -->
+<button mat-raised-button color="primary" type="button" class="btn btn-primary float-right m-2" (click)="download()">Download PDF</button>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl" role="document" >
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">{{ ModalTitle }}</h5>
@@ -36,7 +38,7 @@ data-backdrop="static" data-keyboard="false"
     <thead>
         <tr>
              <th>
-              <div class="d-flex flex-wrap">
+              <div class="d-flex flex-wrap" *ngIf="!isShow">
                 <button type="button" class="btn btn-light"
                 (click)="sortResult('cin', true)">
                 <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-sort-up-alt" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -57,7 +59,7 @@ data-backdrop="static" data-keyboard="false"
               CIN
             </th>
             <th>
-              <div class="d-flex flex-wrap">
+              <div class="d-flex flex-wrap" *ngIf="!isShow">
                 <button type="button" class="btn btn-light"
                 (click)="sortResult('first_name', true)">
                 <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-sort-up-alt" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -78,7 +80,7 @@ data-backdrop="static" data-keyboard="false"
               Full Name
             </th>
             <th>
-              <div class="d-flex flex-wrap">
+              <div class="d-flex flex-wrap" *ngIf="!isShow">
                 <button type="button" class="btn btn-light"
                 (click)="sortResult('job', true)">
                 <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-sort-up-alt" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -99,7 +101,7 @@ data-backdrop="static" data-keyboard="false"
               Job
             </th>
             <th>
-              <div class="d-flex flex-wrap">
+              <div class="d-flex flex-wrap" *ngIf="!isShow">
                 <button type="button" class="btn btn-light"
                 (click)="sortResult('job', true)">
                 <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-sort-up-alt" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -121,7 +123,7 @@ data-backdrop="static" data-keyboard="false"
             </th>
 
             <th>
-              <div class="d-flex flex-row">
+              <div class="d-flex flex-row" *ngIf="!isShow">
                 <input [(ngModel)]="AddressFilter" class="form-control mb-3"
                 (keyup)="FilterFunction()" placeholder="Filter">
               </div>
