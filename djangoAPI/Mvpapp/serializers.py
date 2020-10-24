@@ -87,5 +87,8 @@ class OrphanEducationSerializer(serializers.ModelSerializer):
                   'school',
                   'grade_year',
                   'success',
-                  'score',
+                  'score_1',
+                  'score_2',
+                  'score_3',
+                  'score_final',
                   'updated')

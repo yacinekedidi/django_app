@@ -25,7 +25,7 @@ class Family(models.Model):
     health_status = models.CharField(max_length=100) 
     deceased_parent_name = models.CharField(max_length=50)
     cause_of_death = models.CharField(max_length=100)
-    sponsor_name = models.CharField(max_length=40, null=True, blank=True)
+    sponsor_name = models.CharField(max_length=40, null=True)
     family_status = models.CharField(max_length=50)
 
 
@@ -98,15 +98,16 @@ class OrphanEducation(models.Model):
         (THIRTEEN, 'Thirteenth'),
         (UNIVERSITY, 'University'),
     ]
-    orphan_id = models.ForeignKey(Orphan, on_delete=models.CASCADE)
+    orphan_id = models.ForeignKey(Orphan, on_delete=models.CASCADE, unique=True)
     school = models.CharField(max_length=20)
     grade_year = models.CharField(
         max_length=3, choices=YEAR_IN_SCHOOL_CHOICES, default=PRESCHOOL)
-    success = models.BooleanField(default=True)
+    success = models.BooleanField(default=False, blank=True)
     score_1 = models.CharField(max_length=20, null=True, blank=True)
     score_2 = models.CharField(max_length=20, null=True, blank=True)
     score_3 = models.CharField(max_length=20, null=True, blank=True)
     score_final = models.CharField(max_length=20, null=True, blank=True)
+    updated = models.CharField(max_length=10, null=True, blank=True)
 
 
 
@@ -118,4 +119,4 @@ class family_subsidy(models.Model):
     family_id = models.ForeignKey(Family, on_delete=models.CASCADE)
     subsidy_id = models.ForeignKey(Subsidy, on_delete=models.CASCADE)
     sub_amount = models.IntegerField(default=0)
-    updated = models.CharField(max_length=10, null=True, blank=True)
+    
