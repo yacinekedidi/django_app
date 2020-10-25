@@ -81,6 +81,7 @@ class OrphanEducation(models.Model):
     TWELVE = '12'
     THIRTEEN = '13'
     UNIVERSITY = 'UNI'
+    GRADUATE = 'GR'
     YEAR_IN_SCHOOL_CHOICES = [
         (PRESCHOOL, 'Preschool'),
         (ONE, 'First'),
@@ -97,12 +98,13 @@ class OrphanEducation(models.Model):
         (TWELVE, 'Twelfth'),
         (THIRTEEN, 'Thirteenth'),
         (UNIVERSITY, 'University'),
+        (GRADUATE, 'Graduate')
     ]
-    orphan_id = models.ForeignKey(Orphan, on_delete=models.CASCADE, unique=True)
+    orphan_id = models.OneToOneField(Orphan, on_delete=models.CASCADE)
     school = models.CharField(max_length=20)
     grade_year = models.CharField(
-        max_length=3, choices=YEAR_IN_SCHOOL_CHOICES, default=PRESCHOOL)
-    success = models.BooleanField(default=False, blank=True)
+        max_length=3, choices=YEAR_IN_SCHOOL_CHOICES, null=False)
+    success = models.BooleanField(null=True, blank=True)
     score_1 = models.CharField(max_length=20, null=True, blank=True)
     score_2 = models.CharField(max_length=20, null=True, blank=True)
     score_3 = models.CharField(max_length=20, null=True, blank=True)

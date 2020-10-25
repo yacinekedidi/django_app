@@ -39,6 +39,11 @@ export class ShowOrphComponent implements OnInit {
     private exportAsService: ExportAsService
   ) {}
 
+  isShow = true;
+  toggleDisplay() {
+    this.isShow = !this.isShow;
+  }
+
   ngOnInit(): void {
     this.refreshOrphList();
   }

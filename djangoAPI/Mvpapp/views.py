@@ -17,6 +17,7 @@ def familyApi(request, id=0):
         if id == 0:
             families = Family.objects.all() 
             families_serializer = FamilySerializer(families, many=True)
+            #print([families_serializer.data[i].get('cin') for i in range(0, len(families_serializer.data))])
             return JsonResponse(families_serializer.data, safe=False)
         else:
             fam = Family.objects.get(id=id)
