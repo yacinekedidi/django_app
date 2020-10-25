@@ -90,9 +90,14 @@ export class AddOrphanEducationComponent implements OnInit {
           listgradeyears[listgradeyears.indexOf(val.grade_year) + 1];
       }
     }
-    this.service.addOrphEducation(val).subscribe((data) => {
-      alert(data.toString());
-    });
+    this.service.addOrphEducation(val).subscribe(
+      (data) => {
+        alert(data.toString());
+      },
+      (error) => {
+        alert(error);
+      }
+    );
   }
 
   checkedshow() {
