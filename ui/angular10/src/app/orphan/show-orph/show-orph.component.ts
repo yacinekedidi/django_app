@@ -19,6 +19,7 @@ export class ShowOrphComponent implements OnInit {
   ActivateAddEditOrphComp: boolean = false;
   ActivateInfoOrphComp: boolean = false;
   ActivateAddEditOrphEducationComp: boolean = false;
+  ActivateEditOrphEducationComp: boolean = false;
   orph: any;
 
   IdFilter: string = '';
@@ -65,6 +66,7 @@ export class ShowOrphComponent implements OnInit {
     this.ActivateAddEditOrphComp = true;
     this.ActivateInfoOrphComp = false;
     this.ActivateAddEditOrphEducationComp = false;
+    this.ActivateEditOrphEducationComp = false;
   }
 
   editClick(item) {
@@ -73,6 +75,7 @@ export class ShowOrphComponent implements OnInit {
     this.ActivateAddEditOrphComp = true;
     this.ActivateInfoOrphComp = false;
     this.ActivateAddEditOrphEducationComp = false;
+    this.ActivateEditOrphEducationComp = false;
   }
 
   infoClick(item) {
@@ -80,6 +83,7 @@ export class ShowOrphComponent implements OnInit {
     this.ModalTitle = 'Orphan Information';
     this.ActivateInfoOrphComp = true;
     this.ActivateAddEditOrphEducationComp = false;
+    this.ActivateEditOrphEducationComp = false;
   }
 
   deleteClick(item) {
@@ -106,10 +110,20 @@ export class ShowOrphComponent implements OnInit {
     });
   }
 
-  addOrphanEducation(item) {
-    this.orph = item;
+  addOrphanEducation() {
+    this.orph = this.OrphanList;
     this.ModalTitle = 'Add Orphan Education';
     this.ActivateAddEditOrphEducationComp = true;
+    this.ActivateEditOrphEducationComp = false;
+    this.ActivateAddEditOrphComp = false;
+    this.ActivateInfoOrphComp = false;
+  }
+
+  editOrphEducationClick(item) {
+    this.orph = item;
+    this.ModalTitle = 'Edit Orphan Education';
+    this.ActivateEditOrphEducationComp = true;
+    this.ActivateAddEditOrphEducationComp = false;
     this.ActivateAddEditOrphComp = false;
     this.ActivateInfoOrphComp = false;
   }

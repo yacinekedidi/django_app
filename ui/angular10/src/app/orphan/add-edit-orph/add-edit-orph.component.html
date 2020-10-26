@@ -5,8 +5,7 @@
             <label for="family_id" class="col-sm-2 col-form-label">Family CIN</label>
             <div class="col-sm-10">
                 <select class="form-control" [(ngModel)]="family_id" data-live-search="true">
-                    <option>--select a family member national identification card--</option>
-                    <option *ngFor="let item of FamiliesList" value="{{ item.id }}" data-tokens="{{item.cin}}">
+                    <option *ngFor="let item of FamiliesList" value="{{ item.id }}">
                         {{ item.cin }}
                     </option>
                 </select>

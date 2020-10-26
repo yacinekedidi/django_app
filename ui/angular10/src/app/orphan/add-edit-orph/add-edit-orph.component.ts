@@ -1,3 +1,4 @@
+import { FamilyComponent } from './../../family/family.component';
 import { Component, Input, OnInit } from '@angular/core';
 import { SharedService } from 'src/app/shared.service';
 

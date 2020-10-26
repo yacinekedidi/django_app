@@ -28,21 +28,6 @@ class FamilySerializer(serializers.ModelSerializer):
                   'family_status')
 
 
-class OrphanSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Orphan
-        fields = ('id',
-                  'created_at',
-                  'updated_at',
-                  'show',
-                  'family_id',
-                  'first_name',
-                  'last_name',
-                  'sex',
-                  'birthdate',
-                  'hobbies',
-                  'education_status',
-                  'health_status')
 
 
 class SubsidySerializer(serializers.ModelSerializer):
@@ -91,4 +76,23 @@ class OrphanEducationSerializer(serializers.ModelSerializer):
                   'score_2',
                   'score_3',
                   'score_final',
-                  'updated')
+                  'updated',
+                  'academic_year')
+
+class OrphanSerializer(serializers.ModelSerializer):
+    orphan_education = OrphanEducationSerializer(many=True, read_only=True)
+    class Meta:
+        model = Orphan
+        fields = ('id',
+                  'created_at',
+                  'updated_at',
+                  'show',
+                  'family_id',
+                  'first_name',
+                  'last_name',
+                  'sex',
+                  'birthdate',
+                  'hobbies',
+                  'education_status',
+                  'health_status',
+                  'orphan_education')

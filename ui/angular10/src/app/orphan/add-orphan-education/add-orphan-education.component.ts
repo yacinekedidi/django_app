@@ -9,10 +9,10 @@ import { SharedService } from 'src/app/shared.service';
 export class AddOrphanEducationComponent implements OnInit {
   constructor(private service: SharedService) {}
 
-  @Input() orph: any;
+  @Input() orph: any; //every orphan
   id: any;
   show: boolean = true;
-  orphan_id: any;
+  orphan_id: any; // when we select this need a request that returns the orphan education info by this ID
   school: string;
   grade_year: string;
   success: boolean;
@@ -20,7 +20,8 @@ export class AddOrphanEducationComponent implements OnInit {
   score_2: string;
   score_3: string;
   score_final: string;
-
+  //academic_year: any = new Date().getFullYear();
+  academic_year: any;
   OrphanList: any = [];
 
   ngOnInit(): void {
@@ -28,7 +29,7 @@ export class AddOrphanEducationComponent implements OnInit {
   }
 
   loadOrphanlist() {
-    this.service.getOrphById(this.orph.id).subscribe((data) => {
+    this.service.getOrphById(this.orphan_id).subscribe((data) => {
       this.OrphanList = data;
     });
   }
@@ -66,7 +67,7 @@ export class AddOrphanEducationComponent implements OnInit {
 
     var val = {
       id: this.id,
-      orphan_id: this.orph.id,
+      orphan_id: this.orphan_id,
       show: this.show,
       school: this.school,
       grade_year: this.grade_year,
@@ -78,10 +79,12 @@ export class AddOrphanEducationComponent implements OnInit {
         (Number(this.score_1) + Number(this.score_2) + Number(this.score_3)) /
         3
       ).toString(),
+      academic_year: this.academic_year,
     };
     //alert(listgradeyears.indexOf(val.grade_year));
     //alert(listgradeyears.length);
     //alert(val.grade_year);
+    /*
     if (typeof f === 'boolean' && f == true) {
       if (listgradeyears.indexOf(val.grade_year) + 1 == listgradeyears.length) {
         delete val.grade_year;
@@ -90,6 +93,7 @@ export class AddOrphanEducationComponent implements OnInit {
           listgradeyears[listgradeyears.indexOf(val.grade_year) + 1];
       }
     }
+    */
     this.service.addOrphEducation(val).subscribe(
       (data) => {
         alert(data.toString());

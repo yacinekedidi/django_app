@@ -44,6 +44,7 @@ class Orphan(models.Model):
     health_status = models.CharField(max_length=200)
 
 
+
 class Subsidy(models.Model):
     id = models.AutoField(primary_key=True)
     created_at = models.DateTimeField(auto_now_add=True)
@@ -100,7 +101,7 @@ class OrphanEducation(models.Model):
         (UNIVERSITY, 'University'),
         (GRADUATE, 'Graduate')
     ]
-    orphan_id = models.OneToOneField(Orphan, on_delete=models.CASCADE)
+    orphan_id = models.ForeignKey(Orphan, on_delete=models.CASCADE, related_name="orphan_education", null=True)
     school = models.CharField(max_length=20)
     grade_year = models.CharField(
         max_length=3, choices=YEAR_IN_SCHOOL_CHOICES, null=False)
@@ -110,6 +111,10 @@ class OrphanEducation(models.Model):
     score_3 = models.CharField(max_length=20, null=True, blank=True)
     score_final = models.CharField(max_length=20, null=True, blank=True)
     updated = models.CharField(max_length=10, null=True, blank=True)
+    academic_year = models.CharField(max_length=5)
+    class Meta:
+        unique_together = ("orphan_id", "academic_year")
+
 
 
 

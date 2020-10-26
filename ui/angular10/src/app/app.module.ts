@@ -56,6 +56,7 @@ import { NavComponent } from './nav/nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { HomeComponent } from './home/home.component';
 import { AddOrphanEducationComponent } from './orphan/add-orphan-education/add-orphan-education.component';
+import { EditOrphEducationComponent } from './orphan/edit-orph-education/edit-orph-education.component';
 
 @NgModule({
   declarations: [
@@ -75,6 +76,7 @@ import { AddOrphanEducationComponent } from './orphan/add-orphan-education/add-o
     NavComponent,
     HomeComponent,
     AddOrphanEducationComponent,
+    EditOrphEducationComponent,
   ],
   imports: [
     BrowserModule,
