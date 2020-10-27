@@ -54,6 +54,10 @@ export class SharedService {
     return this.http.get<any[]>(this.APIUrl + '/subsidy/');
   }
 
+  getSubById(val: any) {
+    return this.http.get(this.APIUrl + '/subsidy/', val);
+  }
+
   addSubsidy(val: any) {
     return this.http.post(this.APIUrl + '/subsidy/', val);
   }
