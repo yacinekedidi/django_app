@@ -114,6 +114,7 @@ def subsidyApi(request, id=0):
         if subsidy_serializer.is_valid():
             subsidy_serializer.save()
             return JsonResponse("Updated Successfully!!", safe=False)
+        print(subsidy_serializer.errors)
         d = {}
         for i in subsidy_serializer.errors.keys():
             d[i] = subsidy_serializer.errors[i]

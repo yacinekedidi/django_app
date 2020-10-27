@@ -82,19 +82,21 @@ export class AddEditFamilySubsidyComponent implements OnInit {
     });
 
     // update subsidy amount
-    /*
-    var val2 = {
+        var val2 = {
       id: this.sub.id,
-      amount: Number(this.sub.amount) - Number(val.sub_amount),
+      amount: (Number(this.total_amount) - Number(val.sub_amount)),
+      tittle: this.sub.tittle,
+      description: this.sub.description,
+      sub_type: this.sub.sub_type,
     };
+
     this.service.updateSubsidy(val).subscribe((data)=> {
       alert(data.toString());
-    });
-    */
-  }
+    }, (err)=>{alert(err)});
+      }
 
   checkedshow() {
-    this.show = false;
+    this.show = true;
   }
 
   formatLabel(value: number) {
