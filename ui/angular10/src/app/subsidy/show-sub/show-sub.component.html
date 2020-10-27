@@ -8,6 +8,13 @@ data-target="#exampleModal"
 data-backdrop="static" data-keyboard="false">
     Add Subsidy
   </button>
+  <button mat-raised-button color="accent" type="button" class="btn btn-primary float-right m-2" 
+data-toggle="modal" 
+data-target="#exampleModal"
+(click)="addFamilySubClick()"
+data-backdrop="static" data-keyboard="false">
+    family Subsidy
+  </button>
   <button mat-raised-button color="primary" type="button" class="btn btn-primary float-right m-2" (click)="download()">Download PDF</button>
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -23,6 +30,7 @@ data-backdrop="static" data-keyboard="false">
         <div class="modal-body">
          <app-add-edit-sub [sub]="sub" *ngIf="ActivateAddEditSubComp"></app-add-edit-sub>
          <app-info-sub [sub]="sub" *ngIf="ActivateInfoSubComp"></app-info-sub>
+         <app-add-edit-family-subsidy [sub]="sub" *ngIf="ActivateAddEditFamSubComp"></app-add-edit-family-subsidy>
         </div>
       </div>
     </div>
@@ -212,6 +220,14 @@ data-backdrop="static" data-keyboard="false">
                       <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-trash-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                           <path fill-rule="evenodd" d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7z"/>
                         </svg>
+                  </button>
+                  <!--edit family subsidy-->
+                  <button mat-menu-item type="button" class="btn btn-light mr-1"
+                  data-toggle="modal" 
+                  data-target="#exampleModal"
+                  (click)="editFamSubClick(item)"
+                  data-backdrop="static" data-keyboard="false">
+                  EDIT
                   </button>
                 </mat-menu>
               

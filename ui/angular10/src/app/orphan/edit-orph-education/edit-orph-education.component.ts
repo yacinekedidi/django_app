@@ -25,9 +25,6 @@ export class EditOrphEducationComponent implements OnInit {
   edus: any = [];
 
   ngOnInit(): void {
-    for (let j of this.orph.orphan_education) {
-      this.edus.push(j.academic_year.toString());
-    }
     this.onModelChange();
     //alert(this.orph.orphan_education[0].id);
     //alert(this.orph.orphan_education[0].academic_year);
@@ -38,7 +35,9 @@ export class EditOrphEducationComponent implements OnInit {
 
   onModelChange() {
     //this.edus = this.orph.orphan_education;
-
+    for (let j of this.orph.orphan_education) {
+      this.edus.push(j.academic_year.toString());
+    }
     for (let i of this.orph.orphan_education) {
       if (this.academic_year == i.academic_year.toString()) {
         this.id = i.id.toString();

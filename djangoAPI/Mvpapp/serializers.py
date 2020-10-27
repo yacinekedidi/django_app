@@ -2,7 +2,21 @@ from rest_framework import serializers
 from Mvpapp.models import Family, Orphan, Subsidy, family_subsidy, OrphanEducation
 
 
+
+class FamilySubsidySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = family_subsidy
+        fields = ('id',
+                  'created_at',
+                  'updated_at',
+                  'show',
+                  'subsidy_id',
+                  'family_id',
+                  'sub_amount')
+
+
 class FamilySerializer(serializers.ModelSerializer):
+    familySubsidy = FamilySubsidySerializer(many=True, read_only=True) 
     class Meta:
         model = Family
         fields = ('id',
@@ -25,12 +39,12 @@ class FamilySerializer(serializers.ModelSerializer):
                   'deceased_parent_name',
                   'cause_of_death',
                   'sponsor_name',
-                  'family_status')
-
-
+                  'family_status',
+                  'familySubsidy')
 
 
 class SubsidySerializer(serializers.ModelSerializer):
+    subsidiesForFamilies = FamilySubsidySerializer(many=True, read_only=True)
     class Meta:
         model = Subsidy
         fields = ('id',
@@ -46,19 +60,10 @@ class SubsidySerializer(serializers.ModelSerializer):
                   'age_max',
                   'status',
                   'amount',
-                  'unit')
+                  'unit',
+                  'subsidiesForFamilies')
 
 
-class FamilySubsidySerializer(serializers.ModelSerializer):
-    class Meta:
-        model = family_subsidy
-        fields = ('id',
-                  'created_at',
-                  'updated_at',
-                  'show',
-                  'subsidy_id',
-                  'family_id',
-                  'sub_amount')
 
 
 class OrphanEducationSerializer(serializers.ModelSerializer):

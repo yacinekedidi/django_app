@@ -57,6 +57,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { HomeComponent } from './home/home.component';
 import { AddOrphanEducationComponent } from './orphan/add-orphan-education/add-orphan-education.component';
 import { EditOrphEducationComponent } from './orphan/edit-orph-education/edit-orph-education.component';
+import { AddEditFamilySubsidyComponent } from './subsidy/add-edit-family-subsidy/add-edit-family-subsidy.component';
 
 @NgModule({
   declarations: [
@@ -77,6 +78,7 @@ import { EditOrphEducationComponent } from './orphan/edit-orph-education/edit-or
     HomeComponent,
     AddOrphanEducationComponent,
     EditOrphEducationComponent,
+    AddEditFamilySubsidyComponent,
   ],
   imports: [
     BrowserModule,

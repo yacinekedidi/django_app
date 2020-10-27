@@ -180,7 +180,7 @@ def familysubsidyApi(request, id=0):
 
             familysubsidy_serializer.save()
             return JsonResponse("Added Successfully", safe=False)
-        # print(familysubsidy_serializer.errors)
+        print(familysubsidy_serializer.errors)
         d = {}
         for i in familysubsidy_serializer.errors.keys():
             d[i] = familysubsidy_serializer.errors[i]

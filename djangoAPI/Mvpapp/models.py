@@ -123,7 +123,7 @@ class family_subsidy(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     show = models.BooleanField(default=True)
-    family_id = models.ForeignKey(Family, on_delete=models.CASCADE)
-    subsidy_id = models.ForeignKey(Subsidy, on_delete=models.CASCADE)
+    family_id = models.ForeignKey(Family, on_delete=models.CASCADE, related_name="familySubsidy", null=True)
+    subsidy_id = models.ForeignKey(Subsidy, on_delete=models.CASCADE, related_name="subsidiesForFamilies", null=True)
     sub_amount = models.IntegerField(default=0)
     

@@ -89,4 +89,25 @@ export class SharedService {
   deleteOrphEduction(val: any) {
     return this.http.delete(this.APIUrl + '/orphaneducation/' + val);
   }
+
+  //family_subsidy
+  getFamSubList(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/familysubsidy/');
+  }
+
+  getFamSubById(val: any) {
+    return this.http.get(this.APIUrl + '/familysubsidy/', val);
+  }
+
+  addFamSub(val: any) {
+    return this.http.post(this.APIUrl + '/familysubsidy/', val);
+  }
+
+  updateFamSub(val: any) {
+    return this.http.put(this.APIUrl + '/familysubsidy/', val);
+  }
+
+  deleteFamSub(val: any) {
+    return this.http.delete(this.APIUrl + '/familysubsidy/' + val);
+  }
 }
