@@ -109,6 +109,7 @@ def subsidyApi(request, id=0):
         return JsonResponse([str(k + ": " + v[0] + "\n") for k, v in d.items()], safe=False)
     elif request.method == 'PUT':
         subsidy_data = JSONParser().parse(request)
+        print(subsidy_data['id'])
         subsidy = Subsidy.objects.get(id=subsidy_data['id'])
         subsidy_serializer = SubsidySerializer(subsidy, data=subsidy_data)
         if subsidy_serializer.is_valid():
