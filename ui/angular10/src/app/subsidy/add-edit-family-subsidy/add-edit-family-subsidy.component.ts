@@ -84,6 +84,15 @@ export class AddEditFamilySubsidyComponent implements OnInit {
     this.service.addFamSub(val).subscribe((data) => {
       alert(data.toString());
     });
+
+    var val2 = {
+      id: this.subsidy_id,
+      amount: this.total_amount - this.sub_amount,
+    };
+
+    this.service.updateSubsidy(val2).subscribe((data) => {
+      alert(data.toString());
+    });
   }
 
   updateFamSub() {

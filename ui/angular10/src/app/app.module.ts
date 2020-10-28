@@ -1,3 +1,5 @@
+import { environment } from 'src/environments/environment';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { SharedService } from './shared.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -13,9 +15,7 @@ import { AddEditOrphComponent } from './orphan/add-edit-orph/add-edit-orph.compo
 import { SubsidyComponent } from './subsidy/subsidy.component';
 import { ShowSubComponent } from './subsidy/show-sub/show-sub.component';
 import { AddEditSubComponent } from './subsidy/add-edit-sub/add-edit-sub.component';
-
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MoreInfoComponent } from './family/more-info/more-info.component';
 import { MoreInfoOrphanComponent } from './orphan/more-info-orphan/more-info-orphan.component';
 import { InfoSubComponent } from './subsidy/info-sub/info-sub.component';
@@ -58,6 +58,8 @@ import { HomeComponent } from './home/home.component';
 import { AddOrphanEducationComponent } from './orphan/add-orphan-education/add-orphan-education.component';
 import { EditOrphEducationComponent } from './orphan/edit-orph-education/edit-orph-education.component';
 import { AddEditFamilySubsidyComponent } from './subsidy/add-edit-family-subsidy/add-edit-family-subsidy.component';
+import { LoginModule } from './features/login/login.module';
+import { AngularFireModule } from '@angular/fire';
 
 @NgModule({
   declarations: [
@@ -123,6 +125,13 @@ import { AddEditFamilySubsidyComponent } from './subsidy/add-edit-family-subsidy
     MatSortModule,
     MatPaginatorModule,
     LayoutModule,
+    BrowserModule,
+    AppRoutingModule,
+    LoginModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    LoginModule,
   ],
   providers: [SharedService],
   bootstrap: [AppComponent],

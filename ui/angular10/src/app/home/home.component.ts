@@ -2,13 +2,18 @@ import { Component } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 import { Chart } from 'node_modules/chart.js';
+import { AfterViewInit, OnInit, ViewChild } from '@angular/core';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
   /** Based on the screen size, switch from standard to one column per row */
   cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
     map(({ matches }) => {
@@ -30,7 +35,16 @@ export class HomeComponent {
     })
   );
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(
+    private breakpointObserver: BreakpointObserver,
+    private auth: AngularFireAuth,
+    private router: Router
+  ) {}
+  logout() {
+    this.auth.signOut().then(() => {
+      this.router.navigate(['login']);
+    });
+  }
 
   ngOnInit() {
     var ctx = document.getElementById('myChart');
