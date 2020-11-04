@@ -1,11 +1,5 @@
 {
-  "targets": {
-    "orphan-association": {
-      "hosting": {
-        "angular10": [
-          "orphan-association"
-        ]
-      }
-    }
+  "projects": {
+    "default": "orphan-association"
   }
 }

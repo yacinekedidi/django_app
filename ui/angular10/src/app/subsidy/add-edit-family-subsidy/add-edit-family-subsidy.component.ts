@@ -17,11 +17,11 @@ export class AddEditFamilySubsidyComponent implements OnInit {
 
   old_sub_amount: any;
   total_amount: any;
-  x: any;
 
   FamilyList: any = [];
   SubsidyList: any = [];
   subsidiesForFamilies: any = [];
+  y: any;
 
   ngOnInit(): void {
     //alert(this.total_amount);
@@ -48,6 +48,8 @@ export class AddEditFamilySubsidyComponent implements OnInit {
         this.sub_amount = j.sub_amount.toString();
         this.old_sub_amount = j.sub_amount;
         this.show = j.show.toString();
+        this.total_amount =
+          Number(this.total_amount) + Number(this.old_sub_amount);
       }
     }
   }
@@ -55,7 +57,13 @@ export class AddEditFamilySubsidyComponent implements OnInit {
   onModelChangeForAdd() {
     this.service.getSubById(this.subsidy_id).subscribe((data) => {
       //alert(data.toString());
-      this.total_amount = data[0].amount;
+      var i = 0;
+      while (data[i].id != this.subsidy_id) {
+        i++;
+      }
+      if (data[i].id == this.subsidy_id) {
+        this.total_amount = data[i].amount;
+      }
     });
   }
 
@@ -96,18 +104,11 @@ export class AddEditFamilySubsidyComponent implements OnInit {
   }
 
   updateFamSub() {
-    var x;
-    var y;
     //alert('old_sub_amount' + this.old_sub_amount); 65
     //alert('new_sub_amount' + this.sub_amount); 85
     //alert('total amount' + this.total_amount); 111
-    if (Number(this.old_sub_amount) >= Number(this.sub_amount)) {
-      x = Number(this.old_sub_amount) - this.sub_amount;
-      y = Number(this.total_amount) + x;
-    } else {
-      x = Number(this.sub_amount) - Number(this.old_sub_amount);
-      y = Number(this.total_amount) - x;
-    }
+    this.y =
+      Number(this.total_amount) + Number(this.total_amount - this.sub_amount);
     //alert(this.total_amount);
     //alert(this.sub_amount);
     var val = {
@@ -123,7 +124,7 @@ export class AddEditFamilySubsidyComponent implements OnInit {
     // update subsidy amount
     var val2 = {
       id: this.sub.id,
-      amount: y,
+      amount: this.y,
       title: this.sub.title,
       description: this.sub.description,
       sub_type: this.sub.sub_type,
