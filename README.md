@@ -1,9 +1,7 @@
 # El ihssan association web application
 # Introduction:
-#### The final blog for the project:  
-[Here](https://www.linkedin.com/pulse/introduction-yacine-kedidi/?trackingId=6U1%2F%2Bah0WxA10cgTxhbOdw%3D%3D "Here")  
-#### The website [URL](https://orphan-association.web.app/ "url"):  
-[Here](https://orphan-association.web.app/ "Here")
+#### The final blog for [the project](https://www.linkedin.com/pulse/introduction-yacine-kedidi/?trackingId=6U1%2F%2Bah0WxA10cgTxhbOdw%3D%3D "Here").
+#### The website [URL](https://orphan-association.web.app/ "url").
 #### Our github links:  
 Yacine Kedidi [GITHUB](https://github.com/yacinekedidi/ "GITHUB")  
 Mhamed Azouzi [GITHUB](https://github.com/hunterxx0 "GITHUB")  
