@@ -30,7 +30,7 @@ a new subsidy given for a family:
 this work was done by a 3 team members mhamed azouzi, taib kefi and yacine kedidi
 
 # Related projects:  
-this project relies on a Web API that we made ourselves you can see the deployed apis url in here
+this project relies on a Web API that we made ourselves you can see the deployed apis url in here  
 [family API](https://orph-assoc-api.herokuapp.com/family/ "family API")  
 [subsidy API](https://orph-assoc-api.herokuapp.com/subsidy/ "subsidy API")  
 [orphan API](https://orph-assoc-api.herokuapp.com/orphan/ "orphan API")  
