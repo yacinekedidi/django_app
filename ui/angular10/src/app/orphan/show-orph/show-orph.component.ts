@@ -49,6 +49,7 @@ export class ShowOrphComponent implements OnInit {
     this.refreshOrphList();
   }
 
+  // this method gets triggered if the user clicks on add orphan button
   addClick() {
     this.orph = {
       id: 0,
@@ -69,6 +70,7 @@ export class ShowOrphComponent implements OnInit {
     this.ActivateEditOrphEducationComp = false;
   }
 
+  // this method gets triggered if the user clicks on edit button
   editClick(item) {
     this.orph = item;
     this.ModalTitle = 'Edit Orphan';
@@ -78,6 +80,7 @@ export class ShowOrphComponent implements OnInit {
     this.ActivateEditOrphEducationComp = false;
   }
 
+  // this method gets triggered if the user clicks on more info orphan button
   infoClick(item) {
     this.orph = item;
     this.ModalTitle = 'Orphan Information';
@@ -86,6 +89,7 @@ export class ShowOrphComponent implements OnInit {
     this.ActivateEditOrphEducationComp = false;
   }
 
+  // this method gets triggered if the user clicks on delete orphan button
   deleteClick(item) {
     if (confirm('are you sure you want to delete this??')) {
       this.service.deleteOrphan(item.id).subscribe((data) => {
@@ -97,11 +101,13 @@ export class ShowOrphComponent implements OnInit {
     this.ActivateAddEditOrphComp = true;
   }
 
+  // this method gets triggered if the user exits a modal
   closeClick() {
     this.ActivateAddEditOrphComp = false;
     this.refreshOrphList();
   }
 
+  // this method gets called on the ngoninit function which  always runs first what it actually does is it makes both th orphan list and the orphanlistfiltered the same
   refreshOrphList() {
     this.service.getOrphList().subscribe((data) => {
       this.OrphanList = data;
@@ -110,6 +116,7 @@ export class ShowOrphComponent implements OnInit {
     });
   }
 
+  // this method gets triggered if the user clicks on add orphan education button
   addOrphanEducation() {
     this.orph = this.OrphanList;
     this.ModalTitle = 'Add Orphan Education';
@@ -119,6 +126,7 @@ export class ShowOrphComponent implements OnInit {
     this.ActivateInfoOrphComp = false;
   }
 
+  // this method gets triggered if the user clicks on edit orphan education button
   editOrphEducationClick(item) {
     this.orph = item;
     this.ModalTitle = 'Edit Orphan Education';
@@ -136,6 +144,7 @@ export class ShowOrphComponent implements OnInit {
   }
 */
 
+  // makes a filtered list and displays it depending on which input box row the user typed
   FilterFunction() {
     var IdFilter = this.IdFilter;
     var FamilyIdFilter = this.FamilyIdFilter;
@@ -183,6 +192,7 @@ export class ShowOrphComponent implements OnInit {
     });
   }
 
+  //either sorts in ascending or decsendant order the rows of the table
   sortResult(param: any, flag: boolean) {
     this.OrphanList = this.OrphanListWithoutFilter.sort(function (x, y) {
       if (flag) {
@@ -193,6 +203,7 @@ export class ShowOrphComponent implements OnInit {
     });
   }
 
+  // this method triggers when the user clicks on download
   download() {
     this.exportAsService
       .save(this.exportAsConfig, 'orphans_list')

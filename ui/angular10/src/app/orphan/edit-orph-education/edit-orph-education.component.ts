@@ -33,6 +33,7 @@ export class EditOrphEducationComponent implements OnInit {
     //alert(typeof this.orph.orphan_education[0].id);
   }
 
+  //when the select option chagnes this method gets triggered it fills the input boxes with the adequate data
   onModelChange() {
     //this.edus = this.orph.orphan_education;
     for (let j of this.orph.orphan_education) {
@@ -54,6 +55,7 @@ export class EditOrphEducationComponent implements OnInit {
     }
   }
 
+  // this triggers when we update an orphan education
   updateOrphanEducation() {
     var val = {
       id: this.id,

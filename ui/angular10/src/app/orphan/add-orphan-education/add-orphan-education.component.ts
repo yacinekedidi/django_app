@@ -34,6 +34,7 @@ export class AddOrphanEducationComponent implements OnInit {
     });
   }
 
+  // triggers when we add an orphan education
   addOrphanEducation() {
     var listgradeyears = [
       'PRE',
