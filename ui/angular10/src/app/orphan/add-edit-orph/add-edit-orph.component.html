@@ -1,0 +1,77 @@
+<div class="form-group">
+
+    <div class="col-md-">
+        <div class="form-group row">
+            <label for="family_id" class="col-sm-2 col-form-label">Family CIN</label>
+            <div class="col-sm-10">
+                <select class="form-control" [(ngModel)]="family_id" data-live-search="true">
+                    <option *ngFor="let item of FamiliesList" value="{{ item.id }}">
+                        {{ item.cin }}
+                    </option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="firstname" class="col-sm-2 col-form-label">First Name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" [(ngModel)]="first_name"
+                placeholder="firstname">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="lastname" class="col-sm-2 col-form-label">Last Name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" [(ngModel)]="last_name"
+                placeholder="lastname">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="sex" class="col-sm-2 col-form-label">Sex</label>
+            <div class="col-sm-10">
+                <select class="form-control" [(ngModel)]="sex">
+                    <option>--select a gender--</option>
+                    <option>male</option>
+                    <option>female</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="sex" class="col-sm-2 col-form-label">Birth Date</label>
+            <div class="col-sm-10">
+                <input type="date" class="form-control" [(ngModel)]="birthdate"
+                placeholder="birthdate">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="hobbies" class="col-sm-2 col-form-label">Hobbies</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" [(ngModel)]="hobbies"
+                placeholder="hobbies">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="education_status" class="col-sm-2 col-form-label">Education Status</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" [(ngModel)]="education_status"
+                placeholder="education_status">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="Health Status" class="col-sm-2 col-form-label">Health Status</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" [(ngModel)]="health_status"
+                placeholder="health_status">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<button mat-raised-button color="primary" (click)="addOrphan()" *ngIf="orph.id==0" class="btn btn-primary">
+    Add
+</button>
+
+<button mat-raised-button color="primary" (click)="updateOrphan()" *ngIf="orph.id!=0" class="btn btn-primary">
+    Update
+</button>
