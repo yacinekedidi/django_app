@@ -12,7 +12,7 @@ Taib Kefi [GITHUB](https://github.com/kefitaib "GITHUB")
 you can git clone [this](https://github.com/yacinekedidi/django_app.git "this") to get the source code or you can just visit the deployed website at [Here](https://orphan-association.web.app/ "Here")  
 # Usage:  
 Signup [here](https://orphan-association.web.app/register "here") and it will automatically logs you in with your newly acquired account
-then you get access to the families, orphans and subsidies pages this will allow you to manage them by adding new profiles, editing or deleting or filtering and sorting the informations
+then you get access to the families, orphans and subsidies pages this will allow you to manage them by adding new profiles, editing or deleting or filtering and sorting the informations  
 View all orphans:
 [![](https://github.com/yacinekedidi/django_app/blob/main/images/orphans_list.png)](https://github.com/yacinekedidi/django_app/blob/main/images/orphans_list.png)
 View all families:
