@@ -1,13 +1,11 @@
 # El ihssan association web application
 # Introduction:
-#### The final blog for the project:  
-[Here](https://www.linkedin.com/pulse/introduction-yacine-kedidi/?trackingId=6U1%2F%2Bah0WxA10cgTxhbOdw%3D%3D "Here")  
-#### The website url:  
-[Here](https://orphan-association.web.app/ "Here")
+#### The final blog for [the project](https://www.linkedin.com/pulse/introduction-yacine-kedidi/?trackingId=6U1%2F%2Bah0WxA10cgTxhbOdw%3D%3D "Here").
+#### The website [URL](https://orphan-association.web.app/ "url").
 #### Our github links:  
-Yacine Kedidi [GITHUB](https://github.com/yacinekedidi/ "GITHUB")  
-Mhamed Azouzi [GITHUB](https://github.com/hunterxx0 "GITHUB")  
-Taib Kefi [GITHUB](https://github.com/kefitaib "GITHUB")  
+[Yacine Kedidi](https://github.com/yacinekedidi/ "GitHub")  
+[Mhamed Azouzi](https://github.com/hunterxx0 "GitHub")  
+[Taib Kefi](https://github.com/kefitaib "GitHub")  
 # Installation:  
 you can git clone [this](https://github.com/yacinekedidi/django_app.git "this") to get the source code or you can just visit the deployed website at [Here](https://orphan-association.web.app/ "Here")  
 # Usage:  
@@ -27,7 +25,7 @@ a new subsidy given for a family:
 [![](https://github.com/yacinekedidi/django_app/blob/main/images/giving-a-subsidy-to-a-family.png)](https://github.com/yacinekedidi/django_app/blob/main/images/giving-a-subsidy-to-a-family.png)
 
 # Contributing:  
-this work was done by a 3 team members mhamed azouzi, taib kefi and yacine kedidi
+this work was done by a 3 team members Mhamed Azouzi, Taib Kefi and Yacine Kedidi
 
 # Related projects:  
 this project relies on a Web API that we made ourselves you can see the deployed apis url in here  
