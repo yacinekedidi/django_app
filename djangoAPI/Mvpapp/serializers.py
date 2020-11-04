@@ -1,9 +1,11 @@
+""" Serializers module """
 from rest_framework import serializers
 from Mvpapp.models import Family, Orphan, Subsidy, family_subsidy, OrphanEducation
 
 
 
 class FamilySubsidySerializer(serializers.ModelSerializer):
+    """ Family Subsidy serializer """
     class Meta:
         model = family_subsidy
         fields = ('id',
@@ -16,6 +18,7 @@ class FamilySubsidySerializer(serializers.ModelSerializer):
 
 
 class FamilySerializer(serializers.ModelSerializer):
+    """ Family serializer """
     familySubsidy = FamilySubsidySerializer(many=True, read_only=True) 
     class Meta:
         model = Family
@@ -44,6 +47,7 @@ class FamilySerializer(serializers.ModelSerializer):
 
 
 class SubsidySerializer(serializers.ModelSerializer):
+    """ Subsidy serializer """
     subsidiesForFamilies = FamilySubsidySerializer(many=True, read_only=True)
     class Meta:
         model = Subsidy
@@ -67,6 +71,7 @@ class SubsidySerializer(serializers.ModelSerializer):
 
 
 class OrphanEducationSerializer(serializers.ModelSerializer):
+    """ Orphan Education serializer """
     class Meta:
         model = OrphanEducation
         fields = ('id',
@@ -85,6 +90,7 @@ class OrphanEducationSerializer(serializers.ModelSerializer):
                   'academic_year')
 
 class OrphanSerializer(serializers.ModelSerializer):
+    """ Orphan serializer """
     orphan_education = OrphanEducationSerializer(many=True, read_only=True)
     class Meta:
         model = Orphan
@@ -101,3 +107,4 @@ class OrphanSerializer(serializers.ModelSerializer):
                   'education_status',
                   'health_status',
                   'orphan_education')
+        

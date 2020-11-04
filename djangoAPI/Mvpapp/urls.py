@@ -1,6 +1,6 @@
+""" URL Module """
 from django.conf.urls import url
 from Mvpapp import views
-
 from django.conf.urls.static import static
 from django.conf import settings
 
@@ -16,8 +16,5 @@ urlpatterns = [
     url(r'^familysubsidy/$', views.familysubsidyApi),
     url(r'^familysubsidy/([0-9]+)$', views.familysubsidyApi)
 
-
-    # url(r'^employee/$',views.employeeApi),
-    # url(r'^employee/([0-9]+)$',views.employeeApi),
 
 ]

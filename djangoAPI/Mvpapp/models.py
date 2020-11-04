@@ -1,3 +1,4 @@
+""" Models module """
 from django.db import models
 
 # Create your models here.
@@ -6,6 +7,7 @@ gender = (
     ("female", "female"),
 )
 class Family(models.Model):
+    """ Family model """
     id = models.AutoField(primary_key=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -30,6 +32,7 @@ class Family(models.Model):
 
 
 class Orphan(models.Model):
+        """ Orphan model """
     id = models.AutoField(primary_key=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -46,6 +49,7 @@ class Orphan(models.Model):
 
 
 class Subsidy(models.Model):
+    """ Orphan model """
     id = models.AutoField(primary_key=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -63,6 +67,7 @@ class Subsidy(models.Model):
 
 
 class OrphanEducation(models.Model):
+    """ Orphan model """
     id = models.AutoField(primary_key=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -119,6 +124,7 @@ class OrphanEducation(models.Model):
 
 
 class family_subsidy(models.Model):
+    """ Orphan model """
     id = models.AutoField(primary_key=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
